@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Le Koup'Faim — Kebab à Cambrai · Commande en ligne</title>
-<meta name="description" content="Le Koup'Faim, kebab halal au 16 rue du Général de Gaulle à Cambrai. Kebabs, galettes, assiettes, burgers, tacos. Commandez en ligne : à emporter ou en livraison dans le Cambrésis.">
+<meta name="description" content="Le Koup'Faim, kebab halal au 16 rue du Général de Gaulle à Cambrai. Sandwichs, libanais, paninis, burgers, assiettes et pains pizza avec frites fraîches. Commandez en ligne : à emporter ou en livraison dans le Cambrésis.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2060%2084%22%20fill%3D%22none%22%20stroke%3D%22%23FF7A00%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M31%204l-2%2011%22/%3E%3Cpath%20d%3D%22M9%2023c0-6%2010-9%2021-9s21%203%2021%209l-11%2042c-1%204-5%206-10%206s-9-2-10-6z%22/%3E%3Cpath%20d%3D%22M29%2071l-1%209%22/%3E%3Cg%20fill%3D%22%23FF7A00%22%20stroke%3D%22none%22%3E%3Cpath%20d%3D%22M15%2030c8-3%2019-3%2027-1-8%202-18%203-27%206z%22/%3E%3Cpath%20d%3D%22M47%2037c-9-2-20-1-28%202%208%201%2019%202%2027%204z%22/%3E%3Cpath%20d%3D%22M18%2046c8-3%2018-3%2025-1-7%202-16%203-25%206z%22/%3E%3Cpath%20d%3D%22M43%2053c-8-2-17-1-23%202%207%201%2015%202%2022%204z%22/%3E%3Cpath%20d%3D%22M21%2061c6-2%2013-2%2018-1-5%202-12%203-18%205z%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -353,6 +353,14 @@ body.kitchen .float-cart{display:none!important}
 .kv-head h1{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.5px}
 .kv-head h1 span{color:var(--flame)}
 .kv-head .sp{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.legal{width:min(680px,calc(100% - 24px));padding:26px 26px 30px}
+.legal .m-x{position:sticky;top:0;float:right;width:34px;height:34px;border-radius:50%;background:var(--cream);font-weight:800}
+.legal-body h2{font-family:var(--display);font-size:24px;margin-bottom:6px}.legal-body h3{font-size:15px;margin:18px 0 6px}
+.legal-body p,.legal-body li{font-size:14px;line-height:1.55;color:#3a3a3c}.legal-body ul{padding-left:18px}
+.legal-body .todo{background:#fff2a8;padding:0 4px;border-radius:4px}
+.legal-body table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}.legal-body td,.legal-body th{border:1px solid var(--line);padding:6px 8px;text-align:left}
+footer a{color:inherit}
+.kv-delay{display:flex;gap:8px;flex-wrap:wrap}.kv-delay .dl{display:flex;align-items:center;gap:6px;background:#333335;border-radius:99px;padding:4px 6px 4px 12px;font-size:13px;font-weight:700}.kv-delay .dl.rush{background:#7a2a12}.kv-delay .dl b{min-width:52px;text-align:center}.kv-delay button{width:28px;height:28px;border-radius:50%;background:#4a4a4d;color:#fff;font-weight:800;font-size:16px}.kv-delay .rst{width:auto;padding:0 10px;border-radius:99px;font-size:12px}
 .kv-btn{background:#333335;color:var(--cream);padding:9px 14px;border-radius:99px;font-size:13px;font-weight:700;text-decoration:none}
 .kv-btn.on{background:var(--herb)}
 .kv-info{padding:12px 22px;font-size:13px;color:#b5b2ad;border-bottom:1px solid #333335}
@@ -411,6 +419,137 @@ body.kitchen .float-cart{display:none!important}
 .bump{animation:bump .45s cubic-bezier(.3,1.6,.5,1)}
 @keyframes bump{40%{transform:scale(1.18)}}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-copy>*,.sticker{animation:none}}
+
+/* ================= V7 : style Uber Eats ================= */
+body{background:#fff}
+header.top.ue-top{background:#fff;color:var(--ink);border-bottom:1px solid var(--line)}
+.ue-top .wrap{height:64px;gap:14px}
+.ue-top .logo .lw{color:var(--ink)}
+.ue-top .logo .tagline{color:var(--muted)}
+.ue-top .status{background:var(--cream);color:var(--ink)}
+.ue-mode{display:flex;background:var(--cream);border-radius:99px;padding:4px;margin-left:auto}
+.ue-mode button{color:var(--ink);padding:8px 14px;border-radius:99px;font-weight:700;font-size:13px;white-space:nowrap}
+.ue-mode button.on{background:var(--ink);color:#fff}
+.ue-top .cart-btn{background:var(--ink)}
+.ue-top .cart-btn:hover{background:var(--flame)}
+@media (max-width:820px){
+  .ue-top .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;row-gap:10px}
+  .ue-mode{order:5;margin-left:0;width:100%}.ue-mode button{flex:1}
+  .ue-top .status{margin-left:auto}
+}
+
+.ue-hero{padding-top:18px}
+.ue-cover{position:relative;height:240px;border-radius:16px;overflow:hidden;background:#262628;display:flex;align-items:center;justify-content:center}
+.ue-cover-pattern{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.35)),url("img/couverture.webp") center/cover no-repeat}
+.ue-cover-logo{position:relative;width:96px;height:96px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.ue-cover-logo svg{height:62px;width:auto}
+.ue-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-top:16px}
+.ue-head h1{font-family:var(--display);font-weight:800;font-size:32px;letter-spacing:-.8px;line-height:1.1}
+.ue-meta{color:var(--muted);font-size:14px;margin-top:4px}
+.ue-meta b{color:var(--ink)}
+.ue-meta a{color:var(--ink);font-weight:700}
+.ue-chips{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ue-chip{padding:10px 16px;text-align:center;border-right:1px solid var(--line)}
+.ue-chip:last-child{border-right:0}
+.ue-chip b{display:block;font-size:15px}
+.ue-chip span{font-size:12px;color:var(--muted)}
+@media (max-width:820px){.ue-cover{height:130px}.ue-cover-logo{width:72px;height:72px}.ue-cover-logo svg{height:46px}.ue-head h1{font-size:26px}.ue-chips{width:100%}.ue-chip{flex:1;padding:8px 6px}}
+.ue-hero .reorder{margin-top:16px}
+
+/* barre des catégories */
+.cats{top:64px;background:#fff;margin-top:22px}
+@media (max-width:820px){header.top.ue-top{position:relative}.cats{top:0}}
+.cat{border:0;background:transparent;border-radius:99px;font-weight:700;color:var(--muted)}
+.cat:hover{color:var(--ink);background:var(--cream)}
+.cat.active{background:var(--ink);color:#fff}
+
+/* titres de catégorie */
+.cat-block{padding-top:28px}
+.cat-block h3{font-size:22px}
+
+/* cartes produits façon Uber Eats */
+.menu-layout .grid,.grid{grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:0 18px;margin-top:6px}
+.item.ue-item{display:flex;gap:16px;align-items:stretch;background:#fff;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:16px 0;box-shadow:none;transform:none!important}
+.item.ue-item:hover{border-color:var(--line);box-shadow:none}
+.item.ue-item:hover .name{text-decoration:underline}
+.ue-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.ue-txt .name{font-weight:700;font-size:15px;line-height:1.3}
+.ue-txt .price{font-size:14px;color:var(--ink)}
+.ue-txt .desc{font-size:13px;color:var(--muted);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ue-txt .pop{font-size:12px;font-weight:700;color:var(--flame-d);margin-top:2px}
+.ue-img{position:relative;flex:0 0 112px;height:112px;border-radius:12px;background:var(--cream);display:grid;place-items:center}
+.ue-img svg{width:70px;height:70px;transition:transform .25s}
+.item.ue-item:hover .ue-img svg{transform:scale(1.07) rotate(-5deg)}
+.ue-plus{position:absolute;right:8px;bottom:8px;width:32px;height:32px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-size:20px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.item.ue-item:hover .ue-plus{background:var(--ink);color:#fff}
+
+/* rangée « les plus commandés » */
+.pop-row{display:flex;gap:14px;overflow-x:auto;padding:10px 2px 6px;scrollbar-width:none}
+.pop-row::-webkit-scrollbar{display:none}
+.item.ue-pop{flex:0 0 200px;flex-direction:column;align-items:stretch;gap:8px;background:#fff;border:0;padding:0;box-shadow:none;transform:none!important;text-align:left}
+.ue-pop .ue-img{flex:none;width:100%;height:130px}
+.ue-pop .ue-img svg{width:84px;height:84px}
+.ue-pop .name{font-weight:700;font-size:15px}
+.ue-pop .price{font-size:14px;color:var(--muted)}
+.item.ue-pop:hover .ue-plus{background:var(--ink);color:#fff}
+
+/* fiche produit façon Uber Eats */
+.modal{border-radius:16px}
+.m-hero{background:var(--cream);color:var(--ink);text-align:left;border-radius:16px 16px 0 0;padding:0}
+.m-hero .emo{height:190px;display:grid;place-items:center}
+.m-hero .emo svg{width:130px;height:130px;filter:none}
+img.ph{width:100%;height:100%;object-fit:cover;display:block}
+.ue-img img.ph{border-radius:12px;transition:transform .25s}.item.ue-item:hover .ue-img img.ph{transform:scale(1.03)}
+.ue-img{overflow:hidden}
+.m-hero .emo.has-ph{height:230px;overflow:hidden;border-radius:16px 16px 0 0;animation:none}
+.l-ill.has-ph{padding:0;overflow:hidden}
+.flyer img.ph{border-radius:12px;box-shadow:0 8px 14px rgba(0,0,0,.3)}
+.photo-note{font-size:12px;color:var(--muted);margin-top:6px}
+.m-hero .x{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.15);z-index:2}
+.m-hero h3,.m-hero p{padding:0 24px}
+.m-hero h3{color:var(--ink);font-size:24px;padding-top:18px;background:#fff}
+.m-hero .mp{background:#fff;color:var(--ink);font-weight:700;font-size:16px;margin:0;padding-top:4px;opacity:1}
+.m-hero p#mDesc{background:#fff;color:var(--muted);margin:0;padding-top:6px;padding-bottom:8px;opacity:1}
+.m-body{padding:0 24px 10px}
+.og{border-top:8px solid var(--cream);margin:0 -24px;padding:14px 24px 4px}
+.og-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:4px}
+.og-h b{font-size:16px;display:block}
+.og-h small{font-size:13px;color:var(--muted)}
+.og-req{font-size:11px;font-weight:700;padding:4px 9px;border-radius:99px;background:var(--cream);white-space:nowrap}
+.og-req.need{background:var(--ink);color:#fff}
+.og-req.ok{background:rgba(63,143,77,.14);color:#24602f}
+.m-body .chip.ue-row{display:flex;align-items:center;gap:12px;width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:13px 0;background:none;color:var(--ink);font-size:15px;text-align:left}
+.m-body .chip.ue-row:last-child{border-bottom:0}
+.m-body .chip.ue-row.on{background:none;color:var(--ink)}
+.ue-row .lab{flex:1}
+.ue-row .lab small{display:block;color:var(--muted);font-size:13px}
+.ue-row .xp{color:var(--muted);font-size:14px;white-space:nowrap}
+.ue-row .ctl{flex:0 0 22px;height:22px;border:2px solid #b9b6b0;display:grid;place-items:center}
+.ue-row .ctl.radio{border-radius:50%}
+.ue-row .ctl.check{border-radius:5px}
+.ue-row.on .ctl{border-color:var(--ink);background:var(--ink)}
+.ue-row.on .ctl.radio::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+.ue-row.on .ctl.check::after{content:"✓";color:#fff;font-size:13px;font-weight:700}
+.ue-sub{background:var(--cream);border-radius:12px;padding:2px 14px;margin:2px 0 10px}
+.ue-sub .chip.ue-row{border-bottom-color:rgba(38,38,40,.08)}
+.m-foot{border-top:1px solid var(--line)}
+.m-foot .btn-primary{background:var(--ink)}
+.m-foot .btn-primary:hover{background:var(--flame)}
+
+/* panier latéral */
+@media (min-width:1100px){.side-cart{top:150px;border-radius:16px}}
+.side-cart .btn-primary,.drawer .btn-primary{background:var(--ink)}
+.side-cart .btn-primary:hover,.drawer .btn-primary:hover{background:var(--flame)}
+
+/* infos */
+.ue-infos{padding:50px 0 60px}
+.ue-infos h2{font-size:22px;font-weight:800;letter-spacing:-.4px;margin-bottom:14px}
+.ue-info-grid{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:16px}
+.ue-card{border:1px solid var(--line);border-radius:14px;padding:18px;font-size:14px}
+.ue-card h4{font-size:16px;font-weight:800;margin-bottom:10px}
+.ue-card .btn{padding:9px 14px;font-size:13px;margin-right:6px}
+@media (max-width:900px){.ue-info-grid{grid-template-columns:1fr}}
+footer .logo .lw{color:#fff}
 </style>
 </head>
 <body>
@@ -418,15 +557,12 @@ body.kitchen .float-cart{display:none!important}
 
 <div class="mock-banner">Maquette — démo : les commandes restent dans votre navigateur. <a href="#cuisine" style="font-weight:700">Ouvrir l'écran cuisine →</a></div>
 
-<header class="top">
+<header class="top ue-top">
   <div class="wrap">
     <a href="#" class="logo" aria-label="Le Koup’Faim"><svg class="logo-ic" viewBox="0 0 60 84" fill="none" stroke="#FF7A00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M31 4l-2 11"/><path d="M9 23c0-6 10-9 21-9s21 3 21 9l-11 42c-1 4-5 6-10 6s-9-2-10-6z"/><path d="M29 71l-1 9"/><g fill="#FF7A00" stroke="none"><path d="M15 30c8-3 19-3 27-1-8 2-18 3-27 6z"/><path d="M47 37c-9-2-20-1-28 2 8 1 19 2 27 4z"/><path d="M18 46c8-3 18-3 25-1-7 2-16 3-25 6z"/><path d="M43 53c-8-2-17-1-23 2 7 1 15 2 22 4z"/><path d="M21 61c6-2 13-2 18-1-5 2-12 3-18 5z"/></g></svg><span style="display:flex;flex-direction:column"><span class="logo-txt"><span class="lw">Le Koup’</span><span class="lo">Faim</span></span><span class="tagline"><i></i>KEBAB <b>•</b> TACOS <b>•</b> BURGER<i></i></span></span></a>
-    <nav>
-      <a href="#carte">La carte</a>
-      <a href="#avis">Avis</a>
-      <a href="#infos">Horaires & livraison</a>
-      <a href="tel:+33327741288">03 27 74 12 88</a>
-    </nav>
+    <div class="ue-mode" id="modeToggle" role="tablist" aria-label="Mode de commande">
+      <button data-mode="delivery">🛵 Livraison</button><button data-mode="collect">🥡 À emporter</button>
+    </div>
     <span class="status" id="status"><i></i><span>—</span></span>
     <button class="track-btn" id="trackBtn">📦 <span class="long">Suivre </span><span id="trackNum"></span></button>
     <button class="cart-btn hide-wide" id="openCart" aria-label="Ouvrir le panier">🛒 <span class="count" id="cartCount">0</span></button>
@@ -434,117 +570,67 @@ body.kitchen .float-cart{display:none!important}
 </header>
 <div class="closed-bar" id="closedBar"></div>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <span class="eyebrow">🌮 Kebab · Livraison dans tout le Cambrésis</span>
-      <h1>La faim<br>ne <em>tient pas</em><br>longtemps.</h1>
-      <p class="lead">Kebabs, galettes, assiettes, burgers et tacos, en plein centre-ville. Commandez en ligne : à emporter ou livré chez vous, partout dans le Cambrésis.</p>
-      <div class="cta-row">
-        <a href="#carte" class="btn btn-primary">Commander maintenant →</a>
-        <a href="#infos" class="btn btn-ghost">Horaires & livraison</a>
-      </div>
-      <div class="proof">
-        <div class="halal"><span data-halal></span><span>Viande<br>halal</span></div>
-        <div><b>4,4★</b>Uber Eats · 2 000+ notes</div>
-        <div><b>4,1★</b>Google · 479 avis</div>
-        <div><b>7j/7</b>Midi & soir</div>
-      </div>
-    </div>
-    <div class="spit" aria-hidden="true">
-      <div class="spit-css"><div class="rod"></div><div class="glow"></div><div class="meat"></div></div>
-      <div id="spit3d" title="Faites-la tourner !"></div>
-      <div class="sticker">X €<span>le kebab</span></div>
-    </div>
+<section class="wrap ue-hero">
+  <div class="ue-cover">
+    <div class="ue-cover-pattern" aria-hidden="true"></div>
+    <div class="ue-cover-logo"><svg class="logo-ic" viewBox="0 0 60 84" fill="none" stroke="#FF7A00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M31 4l-2 11"/><path d="M9 23c0-6 10-9 21-9s21 3 21 9l-11 42c-1 4-5 6-10 6s-9-2-10-6z"/><path d="M29 71l-1 9"/><g fill="#FF7A00" stroke="none"><path d="M15 30c8-3 19-3 27-1-8 2-18 3-27 6z"/><path d="M47 37c-9-2-20-1-28 2 8 1 19 2 27 4z"/><path d="M18 46c8-3 18-3 25-1-7 2-16 3-25 6z"/><path d="M43 53c-8-2-17-1-23 2 7 1 15 2 22 4z"/><path d="M21 61c6-2 13-2 18-1-5 2-12 3-18 5z"/></g></svg></div>
   </div>
-</section>
-
-<div class="ticker" aria-hidden="true"><div id="tick"></div></div>
-
-<section class="modes">
-  <div class="wrap">
-    <div class="mode"><span>🥡</span><div><b>À emporter</b>Commandez en ligne, récupérez au 16 rue du Général de Gaulle.</div></div>
-    <div class="mode"><span>🛵</span><div><b>Livraison dans le Cambrésis</b>Cambrai et les communes alentour, jusqu'à 15 km. Frais selon la distance.</div></div>
-    <div class="mode"><span>🍽️</span><div><b>Sur place</b>Installez-vous, c'est ouvert midi et soir, 7j/7.</div></div>
-  </div>
-</section>
-
-<section class="menu-sec" id="carte">
-  <div class="wrap">
-    <h2 class="sec-title">La carte</h2>
-    <p class="sec-sub">Touchez un produit pour choisir formule, sauces et suppléments.</p>
-    <div class="reorder" id="reorder">
-      <p><b>↻ Votre dernière commande</b><span id="reorderTxt"></span></p>
-      <button class="btn btn-dark" id="reorderBtn">Recommander</button>
-    </div>
-  </div>
-  <div class="cats"><div class="wrap" id="cats"></div></div>
-  <div class="wrap menu-layout">
+  <div class="ue-head">
     <div>
-      <div id="menu"></div>
-      <p class="menu-note">Sandwichs, galettes, burgers, paninis, pains pizza et tacos sont servis sans frites : ajoutez-les en option ou passez en menu (+ frites + boisson). Prix affichés « X € » dans cette maquette.</p>
+      <h1>Le Koup’Faim</h1>
+      <p class="ue-meta"><b>★ 4,4</b> (2 000+ notes Uber Eats) · <b>★ 4,1</b> Google · Sandwicherie · Restauration rapide · Frites fraîches · Viande halal</p>
+      <p class="ue-meta">16 rue du Général de Gaulle, Cambrai · <a href="#infos">Horaires et infos</a></p>
     </div>
-    <aside class="side-cart" id="sideCart"></aside>
+    <div class="ue-chips">
+      <div class="ue-chip"><b id="chipFee">7j/7</b><span>11h–14h30 · 18h–23h</span></div>
+      <div class="ue-chip"><b id="chipDelay">~20 min</b><span id="chipDelayLbl">Préparation</span></div>
+      <div class="ue-chip"><b>15 km</b><span>Tout le Cambrésis</span></div>
+    </div>
+  </div>
+  <div class="reorder" id="reorder">
+    <p><b>↻ Votre dernière commande</b><span id="reorderTxt"></span></p>
+    <button class="btn btn-dark" id="reorderBtn">Recommander</button>
   </div>
 </section>
 
-<section class="reviews" id="avis">
-  <div class="wrap">
-    <h2 class="sec-title">Ils en parlent sur Google</h2>
-    <div class="rev-head">
-      <div class="rev-score">
-        <b>4,1</b>
-        <div><div class="stars">★★★★<span class="off">★</span></div><small>479 avis · <span class="g-logo"><i style="color:#4285f4">G</i><i style="color:#ea4335">o</i><i style="color:#fbbc05">o</i><i style="color:#4285f4">g</i><i style="color:#34a853">l</i><i style="color:#ea4335">e</i></span></small></div>
-      </div>
-      <div class="rev-actions">
-        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Le+Koup'Faim+16+rue+du+G%C3%A9n%C3%A9ral+de+Gaulle+Cambrai" target="_blank" rel="noopener">Voir tous les avis</a>
-        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Le+Koup'Faim+16+rue+du+G%C3%A9n%C3%A9ral+de+Gaulle+Cambrai" target="_blank" rel="noopener">★ Laisser un avis</a>
-      </div>
-    </div>
-    <div class="rev-grid" id="revGrid"></div>
-    <p class="rev-note">Emplacement des derniers avis Google : ils s'afficheront ici automatiquement dans la version en ligne (via Google Places).</p>
+<div class="cats" id="carte"><div class="wrap" id="cats"></div></div>
+<div class="wrap menu-layout">
+  <div>
+    <div id="menu"></div>
+    <p class="menu-note">Frites fraîches incluses avec les sandwichs, libanais, paninis, burgers, pains pizza et assiettes. Toutes les assiettes sont garnies de salade et de frites. 1 sauce incluse (pour les assiettes : 1 sauce pour les frites) · sauce en plus 0,70 € · supplément fromage (maroilles, chèvre ou cheddar) 1,50 € · supplément viande de 0,75 € à 4,50 €. Photos non contractuelles.</p>
   </div>
-</section>
+  <aside class="side-cart" id="sideCart"></aside>
+</div>
 
-<section class="infos" id="infos">
-  <div class="wrap">
-    <h2 class="sec-title">Horaires & livraison</h2>
-    <div class="grid3">
-      <div class="card">
-        <h4>Horaires</h4>
-        <table class="hours" id="hours"></table>
-        <p class="mini-note" style="margin-top:12px">Fermé ? Commandez quand même : on prépare votre commande pour l'heure choisie.</p>
-      </div>
-      <div class="card">
-        <h4>Nous trouver</h4>
-        <div class="contact-line">📍<div><b>16 rue du Général de Gaulle</b>59400 Cambrai</div></div>
-        <div class="contact-line">📞<div><b><a href="tel:+33327741288">03 27 74 12 88</a></b>Commande par téléphone</div></div>
-        <div class="contact-line">🛵<div><b>Sur place, à emporter & livraison</b>Titres-restaurant acceptés</div></div>
-      </div>
-      <a class="card mapcard" href="https://www.google.com/maps/dir/?api=1&destination=16+rue+du+G%C3%A9n%C3%A9ral+de+Gaulle,+59400+Cambrai" target="_blank" rel="noopener">
-        <div class="pin">📍</div>
-        <b>16 rue du Général de Gaulle</b>
-        <span>Centre-ville · 59400 Cambrai</span>
-        <span class="btn btn-primary" style="margin-top:16px">Itinéraire →</span>
-      </a>
+<section class="wrap ue-infos" id="infos">
+  <h2>Infos</h2>
+  <div class="ue-info-grid">
+    <div class="ue-card">
+      <h4>Horaires</h4>
+      <table class="hours" id="hours"></table>
+      <p class="mini-note" style="margin-top:10px">Fermé ? Vous pouvez précommander pour plus tard.</p>
     </div>
-    <div class="zones">
-      <div class="card">
-        <h4>Livraison dans le Cambrésis</h4>
-        <table class="ztable" id="ztable"></table>
-        <label class="f zcheck">Est-ce qu'on vous livre ?</label>
-        <select class="f-in" id="zSelect"></select>
-        <div class="zres" id="zRes"></div>
-      </div>
-      <div class="card" style="display:flex;align-items:center;justify-content:center"><div class="radar" id="radar"></div></div>
+    <div class="ue-card">
+      <h4>Adresse</h4>
+      <p><b>16 rue du Général de Gaulle</b><br>59400 Cambrai</p>
+      <p style="margin-top:8px"><a href="tel:+33327741288">03 27 74 12 88</a> · Titres-restaurant acceptés</p>
+      <a class="btn btn-dark" style="margin-top:12px" href="https://www.google.com/maps/dir/?api=1&destination=16+rue+du+G%C3%A9n%C3%A9ral+de+Gaulle,+59400+Cambrai" target="_blank" rel="noopener">Itinéraire</a>
+      <a class="btn btn-line" style="margin-top:12px" href="https://www.google.com/maps/search/?api=1&query=Le+Koup'Faim+16+rue+du+G%C3%A9n%C3%A9ral+de+Gaulle+Cambrai" target="_blank" rel="noopener">Avis Google</a>
+    </div>
+    <div class="ue-card">
+      <h4>Livraison dans le Cambrésis</h4>
+      <table class="ztable" id="ztable"></table>
+      <label class="f zcheck">Est-ce qu'on vous livre ?</label>
+      <select class="f-in" id="zSelect"></select>
+      <div class="zres" id="zRes"></div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div><span class="logo" style="margin-bottom:10px"><svg class="logo-ic" viewBox="0 0 60 84" fill="none" stroke="#FF7A00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M31 4l-2 11"/><path d="M9 23c0-6 10-9 21-9s21 3 21 9l-11 42c-1 4-5 6-10 6s-9-2-10-6z"/><path d="M29 71l-1 9"/><g fill="#FF7A00" stroke="none"><path d="M15 30c8-3 19-3 27-1-8 2-18 3-27 6z"/><path d="M47 37c-9-2-20-1-28 2 8 1 19 2 27 4z"/><path d="M18 46c8-3 18-3 25-1-7 2-16 3-25 6z"/><path d="M43 53c-8-2-17-1-23 2 7 1 15 2 22 4z"/><path d="M21 61c6-2 13-2 18-1-5 2-12 3-18 5z"/></g></svg><span class="logo-txt"><span class="lw">Le Koup’</span><span class="lo">Faim</span></span></span>16 rue du Général de Gaulle, 59400 Cambrai</div>
-    <div>Mentions légales · Allergènes · CGV · <a href="#cuisine">Espace cuisine</a><br>© <span id="yr"></span> Le Koup'Faim</div>
+    <div><span class="logo" style="margin-bottom:10px"><svg class="logo-ic" viewBox="0 0 60 84" fill="none" stroke="#FF7A00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M31 4l-2 11"/><path d="M9 23c0-6 10-9 21-9s21 3 21 9l-11 42c-1 4-5 6-10 6s-9-2-10-6z"/><path d="M29 71l-1 9"/><g fill="#FF7A00" stroke="none"><path d="M15 30c8-3 19-3 27-1-8 2-18 3-27 6z"/><path d="M47 37c-9-2-20-1-28 2 8 1 19 2 27 4z"/><path d="M18 46c8-3 18-3 25-1-7 2-16 3-25 6z"/><path d="M43 53c-8-2-17-1-23 2 7 1 15 2 22 4z"/><path d="M21 61c6-2 13-2 18-1-5 2-12 3-18 5z"/></g></svg><span class="logo-txt"><span class="lw">Le Koup’</span><span class="lo">Faim</span></span><br>16 rue du Général de Gaulle, 59400 Cambrai</div>
+    <div><a href="#" data-legal="mentions">Mentions légales</a> · <a href="#" data-legal="cgv">CGV</a> · <a href="#" data-legal="confid">Confidentialité</a> · <a href="#" data-legal="allergenes">Allergènes et origine des viandes</a> · <a href="#cuisine">Espace cuisine</a><br>© <span id="yr"></span> Le Koup’Faim</div>
   </div>
 </footer>
 
@@ -556,6 +642,7 @@ body.kitchen .float-cart{display:none!important}
   <div class="kv-head">
     <h1><span>Koup’Faim</span> · Écran cuisine</h1>
     <div class="sp">
+      <div class="kv-delay" id="kvDelay"></div>
       <button class="kv-btn" id="kvSound">🔔 Activer le bip</button>
       <button class="kv-btn" id="kvDemo">+ Commande test</button>
       <button class="kv-btn" id="kvClear">Vider</button>
@@ -574,6 +661,7 @@ body.kitchen .float-cart{display:none!important}
     <button class="x" data-close>×</button>
     <div class="emo" id="mEmo"></div>
     <h3 id="mName"></h3>
+    <p class="mp" id="mPrice"></p>
     <p id="mDesc"></p>
   </div>
   <div class="m-body" id="mBody"></div>
@@ -583,6 +671,7 @@ body.kitchen .float-cart{display:none!important}
   </div>
 </div>
 
+<div class="modal legal" id="legal" role="dialog" aria-modal="true"><button class="m-x" id="legalX" aria-label="Fermer">✕</button><div class="legal-body" id="legalBody"></div></div>
 <aside class="drawer" id="drawer" aria-label="Panier">
   <div class="drawer-head"><h3 id="dTitle">Votre commande</h3><button class="x" data-close>×</button></div>
   <div class="drawer-body" id="dBody"></div>
@@ -595,6 +684,9 @@ body.kitchen .float-cart{display:none!important}
 /* ---------- Illustrations (SVG maison, style trait épais) ---------- */
 const K="#262628", BR="#f6c98a", BRD="#e09a45", MT="#a4552a", MTD="#7a3b18", LT="#6fae4f", TO="#e8431b", CH="#FFB23F", WH="#ffffff", OR="#FF7A00";
 const S=`stroke="${K}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"`;
+/* Photos des plats (photos du restaurant, reprises de sa page Uber Eats) */
+const PHOTO = {"sw-kebab": "sandwich-kebab", "sw-mex": "sandwich-mexicanos", "sw-poulet": "sandwich-poulet", "sw-steak": "sandwich-steak", "sw-merguez": "sandwich-merguez", "sw-agneau": "sandwich-agneau", "sw-boeuf": "sandwich-steak", "sw-kefta": "sandwich-steak", "sw-adana": "sandwich-agneau", "sw-fric": "sandwich-merguez", "lb-kebab": "galette-kebab", "lb-kefta": "galette", "lb-steak": "galette", "lb-poulet": "galette", "lb-mex": "galette", "lb-tenders": "galette", "pa-fromage": "panini", "pa-kefta": "panini", "pa-kebab": "panini", "pa-steak": "panini", "pa-poulet": "panini-poulet", "pa-mex": "panini", "pa-agneau": "panini", "pa-adana": "panini", "bu-hamb": "burger-simple", "bu-chicken": "burger-simple", "bu-double": "burger-double", "bu-triple": "burger-double", "as-kebab": "assiette-kebab", "as-kofte": "assiette-kefta", "as-steak": "assiette-steak", "as-merguez": "assiette-merguez", "as-bboeuf": "assiette-brochette-boeuf", "as-bagneau": "assiette-agneau", "as-cotelettes": "assiette-agneau", "as-tenders": "assiette-tenders", "as-mixte": "assiette-kebab", "pp-viande": "pain-pizza", "pp-fromage": "pain-pizza", "me-enfant": "menu-enfant", "de-daim": "tarte-daim", "bo-canette": "coca", "bo-eau": "eau", "bo-coca-maxi": "coca-maxi"};
+const pic = (id,e) => PHOTO[id] ? `<img class="ph" src="img/${PHOTO[id]}.webp" alt="" loading="lazy">` : art(e);
 const ART = {
  pita:`<path d="M7 29h50c0 16-11 27-25 27S7 45 7 29z" fill="${BR}" ${S}/><path d="M13 36c8 6 30 6 38 0" fill="none" stroke="${BRD}" stroke-width="2.5" stroke-linecap="round"/><path d="M8 29c3-7 8-9 12-4 3-6 9-7 12-2 4-6 10-5 12 1 4-4 10-2 12 5z" fill="${LT}" ${S}/><path d="M12 29c2-6 8-6 10-1 3-5 9-5 11 0 3-5 9-5 11 0 3-4 8-3 9 1z" fill="${MT}" ${S}/><circle cx="21" cy="22" r="4" fill="${TO}" ${S}/><circle cx="44" cy="21" r="3.5" fill="${TO}" ${S}/>`,
  wrap:`<g transform="rotate(28 32 32)"><rect x="21" y="6" width="22" height="50" rx="11" fill="${BR}" ${S}/><ellipse cx="32" cy="12" rx="9" ry="5" fill="${MT}" ${S}/><circle cx="28" cy="10" r="2" fill="${LT}"/><circle cx="35" cy="12" r="2" fill="${TO}"/><path d="M19 34l4-3 4 3 5-3 5 3 4-3 4 3v18a5 5 0 0 1-5 5H24a5 5 0 0 1-5-5z" fill="${WH}" ${S}/><path d="M24 44h16" stroke="${TO}" stroke-width="2.5" stroke-linecap="round"/></g>`,
@@ -612,6 +704,9 @@ const ART = {
  fries:`<g ${S}><path d="M18 26l-4-18 6-1 3 19zM24 25l-2-20 6 0 1 20zM31 25l2-19 6 1-3 18zM37 26l5-16 6 2-6 15zM14 27l-6-14 6-2 5 15z" fill="${CH}"/><path d="M12 26h40l-5 30H17z" fill="${OR}"/></g><path d="M22 38c3 4 7 6 10 6s7-2 10-6" fill="none" stroke="${WH}" stroke-width="3" stroke-linecap="round"/>`,
  nuggets:`<g ${S}><path d="M8 34c0-8 8-10 12-8 6-3 12 2 10 8 2 6-6 10-12 8-6 2-10-2-10-8z" fill="${CH}"/><path d="M32 22c2-7 10-8 14-5 6-1 10 5 7 10 1 6-7 9-12 6-6 1-11-5-9-11z" fill="#e9a23a"/><path d="M30 46c1-7 9-9 13-6 6-2 11 4 8 9 1 6-7 8-12 6-6 1-10-3-9-9z" fill="${CH}"/></g><g fill="${BRD}"><circle cx="16" cy="32" r="1.2"/><circle cx="22" cy="36" r="1.2"/><circle cx="40" cy="24" r="1.2"/><circle cx="46" cy="28" r="1.2"/><circle cx="38" cy="48" r="1.2"/><circle cx="44" cy="46" r="1.2"/></g>`,
  kid:`<g ${S}><path d="M14 12l-2 12M20 10l0 14M26 11l2 13" stroke="${K}" fill="none"/><path d="M14 12l-2 12M20 10l0 14M26 11l2 13" stroke="${CH}" stroke-width="2" fill="none"/><path d="M10 24h44l-4 32H14z" fill="${OR}"/><path d="M22 18c0-8 20-8 20 0" fill="none"/></g><circle cx="26" cy="36" r="2.4" fill="${K}"/><circle cx="38" cy="36" r="2.4" fill="${K}"/><path d="M24 43c4 5 12 5 16 0" fill="none" stroke="${K}" stroke-width="2.5" stroke-linecap="round"/><path d="M44 16l2 4 4 .5-3 3 1 4-4-2-4 2 1-4-3-3 4-.5z" fill="${CH}" ${S}/>`,
+ box:`<path d="M8 30h48l-5 24H13z" fill="#e3ddd3" ${S}/><path d="M11 30c1-8 8-12 14-9 4-7 13-7 17 0 6-3 12 1 13 9z" fill="${MT}" ${S}/><path d="M20 24c3-2 6-2 9 0M34 22c3-2 6-1 9 1" stroke="${MTD}" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M16 38h32" stroke="#c9c2b6" stroke-width="2"/>`,
+ icepot:`<g ${S}><path d="M14 22h36l-4 34H18z" fill="#bfe3f0"/><path d="M12 16h40v7H12z" fill="#7a3b18"/></g><path d="M17 34h30" stroke="#fff" stroke-width="4"/><circle cx="32" cy="44" r="5" fill="${CH}" stroke="${K}" stroke-width="2"/>`,
+ icecream:`<path d="M32 40v18" stroke="#c9a46a" stroke-width="5" stroke-linecap="round"/><path d="M20 14c0-6 5-9 12-9s12 3 12 9v24a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4z" fill="#6b3b1e" stroke="${K}" stroke-width="2.5"/><g fill="#f3d9a4"><circle cx="26" cy="18" r="1.8"/><circle cx="36" cy="14" r="1.8"/><circle cx="31" cy="26" r="1.8"/><circle cx="38" cy="30" r="1.8"/><circle cx="25" cy="33" r="1.8"/></g>`,
  cake:`<g ${S}><path d="M10 24l22-10 22 10v26l-22 8-22-8z" fill="#f6e3c4"/><path d="M10 24l22 8 22-8-22-10z" fill="#6b3b1e"/><path d="M32 32v26"/></g><path d="M11 34l21 8M11 42l21 8" stroke="#a87449" stroke-width="3"/><path d="M33 42l20-8M33 50l20-8" stroke="#a87449" stroke-width="3"/><g fill="#4a2510"><circle cx="24" cy="21" r="1"/><circle cx="34" cy="19" r="1"/><circle cx="40" cy="24" r="1"/><circle cx="28" cy="26" r="1"/></g>`,
  can:`<g ${S}><path d="M20 12h24l2 4v34l-2 4H20l-2-4V16z" fill="${OR}"/><ellipse cx="32" cy="12" rx="12" ry="3.5" fill="#d8d2c8"/></g><path d="M18 26c8 6 20-6 28 0v10c-8-6-20 6-28 0z" fill="${WH}" stroke="${K}" stroke-width="2"/><path d="M38 11h4" stroke="${K}" stroke-width="2" stroke-linecap="round"/>`,
  bottle:`<g ${S}><rect x="27" y="4" width="10" height="7" rx="2" fill="${TO}"/><path d="M27 11h10v5c6 3 9 7 9 13v23a5 5 0 0 1-5 5H23a5 5 0 0 1-5-5V29c0-6 3-10 9-13z" fill="#bfe3f0"/><rect x="18" y="30" width="28" height="14" fill="${CH}"/></g><path d="M23 22c-1 2-1 5-1 7M22 48v4" stroke="${WH}" stroke-width="3" stroke-linecap="round"/>`,
@@ -619,30 +714,27 @@ const ART = {
 const art = (k,cls="") => `<svg class="ill ${cls}" viewBox="0 0 64 64" aria-hidden="true">${ART[k]||ART.pita}</svg>`;
 
 /* =========================================================
-   DONNÉES — à ajuster avec le restaurant.
-   Les montants sont fictifs (calculs internes de la maquette) :
-   l'affichage est « X € » partout (voir eur()).
+   DONNÉES — carte officielle d'après les flyers du Koup'Faim
+   (menu orange plastifié en boutique + dépliant bleu).
+   Les prix sont en euros TTC.
    ========================================================= */
-const SAUCES = ["Blanche","Algérienne","Samouraï","Harissa","Andalouse","Biggy","Barbecue","Ketchup","Mayonnaise","Curry"];
+const SAUCES = ["Ketchup","Mayonnaise","Andalouse","Algérienne","Américaine","Burger","Cocktail","Hannibal","Pitta","Poivre","Samouraï"];
 const SANS = ["Sans salade","Sans tomate","Sans oignon"];
-/* Suppléments : fromage ou viande (toutes les viandes de la carte) */
-const CHEESES = ["Cheddar","Chèvre","Maroilles"];
-const ALL_MEATS = ["Kebab","Poulet","Steak de bœuf","Steak haché","Merguez","Kefta","Mexicanos","Tenders","Nuggets","Cordon bleu","Brochette d'agneau","Brochette de bœuf"];
-const DRINKS = ["Coca-Cola","Coca-Cola Zero","Fanta","Ice Tea","Oasis","Eau"];
-const DESSERTS = ["Tiramisu","Tarte au Daim","Cookie"];
-const PLATE = "Salade, tomates, oignons, frites et sauce au choix";
+const CHEESES = ["Maroilles","Chèvre","Cheddar"];
+/* Supplément viande : prix de la caisse du restaurant (null = prix à confirmer) */
+const MEAT_SUP = {"Kebab":null,"Poulet":null,"Steak haché":null,"Adana":null,"Kefta":1.50,"Tenders":1.50,"Nuggets":0.75,"Merguez":2.00,"Fricandelle":2.00,"Mexicanos":2.50,"Cordon bleu":3.50,"Brochette de bœuf":4.50,"Brochette d'agneau":4.50};
+const ALL_MEATS = Object.keys(MEAT_SUP);
+const DRINKS = ["Coca-Cola","Coca-Cola cherry","Fanta orange","Fanta citron","Oasis tropical","Oasis pomme cassis","Ice Tea pêche","7 Up mojito","7 Up cherry"];   /* canettes 33 cl */
+const PIZZA_MEATS = ["Kebab","Steak","Merguez","Fricandelle","Mexicanos","Poulet"];
+const KID_CHOICES = ["Viande kebab","Hamburger","Steak","Fricandelle","Nuggets","Tenders"];
 
-const TACOS_SIZES = [
-  {k:"M",  n:"Tacos M",  v:1, p:8.5},
-  {k:"L",  n:"Tacos L",  v:2, p:10.5},
-  {k:"XL", n:"Tacos XL", v:3, p:12.5},
-];
-const TACOS_MEATS = ["Kebab","Poulet","Steak haché","Merguez","Kefta","Mexicanos","Tenders","Nuggets","Cordon bleu"];
+/* Suppléments (prix de la caisse du restaurant) */
+const SUP = {sauce:0.70, fromage:1.50, canette:2.00, eau:1.50};
+/* Tacos : tailles et prix à confirmer avec le restaurant (null = prix à confirmer) */
+const TACOS_SIZES = [{k:"M",n:"Tacos M",v:1,p:null},{k:"L",n:"Tacos L",v:2,p:null},{k:"XL",n:"Tacos XL",v:3,p:null}];
+const TACOS_MEATS = ["Kebab","Poulet","Steak haché","Merguez","Kefta","Mexicanos","Fricandelle","Tenders"];
 
-/* Suppléments (montants fictifs) */
-const SUP = {menu:2.5, frites:2, boisson:1.8, dessert:3, fromage:1, viande:2};
-
-/* Livraison : rayon max 15 km, frais par palier (montants fictifs) */
+/* Livraison : rayon max 15 km, frais par palier (montants à définir avec le restaurant) */
 const MAX_KM = 15;
 const ZONES = [
   {max:3,  fee:1.5, color:"#3f8f4d"},
@@ -653,58 +745,112 @@ const ZONES = [
 /* Distances indicatives depuis le 16 rue du Général de Gaulle (à remplacer par un vrai calcul d'adresse) */
 const COMMUNES = [["Cambrai",1],["Neuville-Saint-Rémy",2],["Escaudœuvres",3],["Proville",3],["Tilloy-lez-Cambrai",3],["Fontaine-Notre-Dame",4],["Awoingt",5],["Cauroir",5],["Niergnies",5],["Raillencourt-Sainte-Olle",5],["Ramillies",5],["Naves",6],["Sailly-lez-Cambrai",6],["Cantaing-sur-Escaut",6],["Noyelles-sur-Escaut",7],["Rumilly-en-Cambrésis",7],["Thun-l'Évêque",7],["Marcoing",8],["Bourlon",9],["Masnières",9],["Iwuy",10],["Avesnes-les-Aubert",11],["Beauvois-en-Cambrésis",12],["Caudry",16],["Solesmes",19],["Le Cateau-Cambrésis",24],["Douai",25],["Valenciennes",30]];
 const MIN_DELIVERY = 10;
-const PROMO = {code:"BIENVENUE", value:3};
-const PREP_MIN = 20;
+/* Réduction pour paiement au retrait / à la livraison (espèces ou CB sur le TPE).
+   Une réduction liée au moyen de paiement est autorisée ; un supplément ne l'est pas (art. L112-12 CMF). */
+const SERVICE_FEE = 1.00;   /* frais de service : toute commande passée sur le site */
+const PAY_DISCOUNT = 1.00;  /* réduction : paiement au comptoir / à la livraison (espèces ou TPE) */
+const payDiscount = () => cart.length && order.pay==="boutique" ? Math.min(PAY_DISCOUNT, subtotal()) : 0;
+/* Délais moyens : réglables depuis l'écran cuisine pendant les rushs */
+const DELAY_DEF = {collect:20, delivery:45};
+const delays = () => ({...DELAY_DEF, ...LS.get("kf-delays",{})});
+const delayOf = mode => delays()[mode==="delivery"?"delivery":"collect"];
+const delayText = mode => mode==="delivery" ? `${delayOf("delivery")-5}–${delayOf("delivery")} min` : `~${delayOf("collect")} min`;
 
-/* f = formule menu / frites ; x = extras boisson-dessert ; sup = suppléments ; tacos = composer */
+/* Champs : s = 1 sauce incluse · fr = frites incluses · x = canette en plus · sup = suppléments fromage/viande
+   ch = choix obligatoire {t, o} · kid = boisson du menu enfant */
+const SW = (id,n,p,v,o={}) => ({id,n,p,e:"pita",d:`Pain, ${v}, crudités, 1 sauce au choix + frites`,s:1,fr:true,x:true,sup:true,...o});
+const LB = (id,n,v,o={}) => ({id,n,p:7.00,e:"wrap",d:`Pain libanais roulé, ${v}, crudités, sauce + frites`,s:1,fr:true,x:true,sup:true,...o});
+const PN = (id,n,p,v,o={}) => ({id,n,p,e:"panini",d:`Panini grillé, ${v} + frites`,s:1,fr:true,x:true,sup:true,...o});
+const AS = (id,n,p,e,v,o={}) => ({id,n,p,e,d:`${v}, salade, frites + 1 sauce au choix pour les frites`,s:1,fr:true,x:true,plate:true,...o});
 const MENU = [
  {cat:"Sandwichs", items:[
-  {id:"sw-kebab", n:"Sandwich kebab", p:8.90, e:"pita", d:"Pain, viande kebab, crudités, sauce au choix", pop:true, s:2, f:true, x:true, sup:true},
-  {id:"sw-poulet", n:"Sandwich poulet", p:8.90, e:"pita", d:"Pain, poulet, crudités, sauce au choix", s:2, f:true, x:true, sup:true},
+  SW("sw-kebab","Kebab + frites",6.50,"viande kebab",{pop:true}),
+  SW("sw-poulet","Poulet + frites",6.50,"poulet"),
+  SW("sw-merguez","Merguez + frites",6.50,"merguez"),
+  SW("sw-steak","Steak haché + frites",6.50,"steak haché"),
+  SW("sw-kefta","Kefta + frites",6.50,"kefta"),
+  SW("sw-mex","Mexicanos + frites",6.50,"mexicanos"),
+  SW("sw-fric","Fricandelle + frites",6.50,"fricandelle"),
+  SW("sw-boeuf","Bœuf + frites",7.50,"bœuf"),
+  SW("sw-agneau","Agneau + frites",7.50,"agneau"),
+  SW("sw-adana","Adana + frites",7.50,"adana"),
  ]},
- {cat:"Galettes", items:[
-  {id:"ga-kebab", n:"Galette kebab", p:9.60, e:"wrap", d:"Galette roulée, viande kebab, crudités, sauce", pop:true, s:2, f:true, x:true, sup:true},
-  {id:"ga-poulet", n:"Galette poulet", p:9.60, e:"wrap", d:"Galette roulée, poulet, crudités, sauce", s:2, f:true, x:true, sup:true},
+ {cat:"Libanais", items:[
+  LB("lb-kebab","Libanais kebab + frites","viande kebab",{pop:true}),
+  LB("lb-kefta","Libanais kefta + frites","kefta"),
+  LB("lb-steak","Libanais steak + frites","steak"),
+  LB("lb-poulet","Libanais poulet + frites","poulet"),
+  LB("lb-mex","Libanais mexicanos + frites","mexicanos"),
+  LB("lb-tenders","Libanais tenders + frites","tenders"),
  ]},
  {cat:"Tacos", items:[
-  {id:"ta-compose", n:"Tacos à composer", p:8.5, e:"tacos", d:"Taille, viandes, sauces, suppléments : composez-le comme vous l'aimez. Sauce fromagère incluse.", s:2, f:true, x:true, sup:true, tacos:true},
- ]},
- {cat:"Assiettes", items:[
-  {id:"as-kebab", n:"Assiette kebab", p:12.35, e:"plate", d:PLATE, pop:true, s:2, x:true, sup:true},
-  {id:"as-poulet", n:"Assiette poulet", p:13.00, e:"plate", d:PLATE, s:2, x:true, sup:true},
-  {id:"as-agneau", n:"Assiette brochettes d'agneau", p:18.50, e:"skewer", d:PLATE, s:2, x:true},
-  {id:"as-boeuf", n:"Assiette brochette de bœuf", p:16.45, e:"skewer", d:PLATE, s:2, x:true},
-  {id:"as-tenders", n:"Assiette tenders", p:13.00, e:"tenders", d:"5 tenders, salade, tomates, oignons, frites, sauce", s:2, x:true},
-  {id:"as-merguez", n:"Assiette merguez", p:12.35, e:"merguez", d:PLATE, s:2, x:true},
-  {id:"as-steak", n:"Assiette steak de bœuf", p:12.35, e:"steak", d:PLATE, s:2, x:true},
-  {id:"as-kefta", n:"Assiette kefta", p:12.35, e:"kefta", d:PLATE, s:2, x:true},
-  {id:"as-mex", n:"Assiette mexicanos", p:12.35, e:"chili", d:PLATE, s:2, x:true},
- ]},
- {cat:"Pains pizza", items:[
-  {id:"pp-steak", n:"Pain pizza steak", p:9.60, e:"pizzabread", d:"Pain pizza garni, steak de bœuf, fromage, sauce", pop:true, s:2, f:true, x:true, sup:true},
-  {id:"pp-kebab", n:"Pain pizza kebab", p:9.60, e:"pizzabread", d:"Pain pizza garni, viande kebab, fromage, sauce", s:2, f:true, x:true, sup:true},
- ]},
- {cat:"Burgers", items:[
-  {id:"bu-simple", n:"Simple burger", p:8.20, e:"burger", d:"Steak de bœuf, fromage, crudités, sauce", s:1, f:true, x:true, sup:true},
-  {id:"bu-double", n:"Double burger", p:10.30, e:"burger", d:"Deux steaks de bœuf, fromage, crudités, sauce", pop:true, s:1, f:true, x:true, sup:true},
+  {id:"ta-compose",n:"Tacos à composer",p:null,e:"tacos",d:"Taille, viandes et sauce au choix. Frites et sauce fromagère à l'intérieur.",tacos:true,s:1,x:true,sup:true},
  ]},
  {cat:"Paninis", items:[
-  {id:"pa-kebab", n:"Panini kebab", p:9.60, e:"panini", d:"Panini grillé, viande kebab, fromage", s:1, f:true, x:true, sup:true},
-  {id:"pa-poulet", n:"Panini poulet", p:9.60, e:"panini", d:"Panini grillé, poulet, fromage", s:1, f:true, x:true, sup:true},
-  {id:"pa-steak", n:"Panini steak de bœuf", p:9.60, e:"panini", d:"Panini grillé, steak de bœuf, fromage", s:1, f:true, x:true, sup:true},
+  PN("pa-fromage","Panini fromage + frites",6.00,"fromage"),
+  PN("pa-kefta","Panini kefta + frites",7.00,"kefta"),
+  PN("pa-kebab","Panini kebab + frites",7.00,"viande kebab"),
+  PN("pa-steak","Panini steak haché + frites",7.00,"steak haché"),
+  PN("pa-poulet","Panini poulet + frites",7.00,"poulet"),
+  PN("pa-mex","Panini mexicanos + frites",7.00,"mexicanos"),
+  PN("pa-agneau","Panini agneau + frites",8.00,"agneau"),
+  PN("pa-adana","Panini adana + frites",8.00,"adana"),
  ]},
- {cat:"Tex Mex & frites", items:[
-  {id:"fr-grande", n:"Grande frites", p:6.20, e:"fries", d:"Grande portion de frites", s:1},
-  {id:"tm-tenders", n:"Tenders x5", p:6.00, e:"tenders", d:"5 tenders croustillants", s:1},
-  {id:"tm-nuggets", n:"Nuggets x6", p:5.00, e:"nuggets", d:"6 nuggets de poulet", s:1},
+ {cat:"Burgers", items:[
+  {id:"bu-hamb",n:"Hamburger steak + frites",p:6.00,e:"burger",d:"Steak haché, crudités, sauce + frites",s:1,fr:true,x:true,sup:true},
+  {id:"bu-chicken",n:"Chicken burger + frites",p:7.50,e:"burger",d:"Poulet pané, crudités, sauce + frites",s:1,fr:true,x:true,sup:true},
+  {id:"bu-double",n:"Double steak + frites",p:7.50,e:"burger",d:"Deux steaks hachés, crudités, sauce + frites",s:1,fr:true,x:true,sup:true,pop:true},
+  {id:"bu-triple",n:"Triple steak + frites",p:8.50,e:"burger",d:"Trois steaks hachés, crudités, sauce + frites",s:1,fr:true,x:true,sup:true},
+ ]},
+ {cat:"Assiettes", items:[
+  AS("as-kebab","Assiette kebab",9.00,"plate","Viande kebab",{pop:true}),
+  AS("as-fric","Assiette fricandelle",9.00,"merguez","Fricandelles"),
+  AS("as-kofte","Assiette köfte",9.00,"kefta","Köfte"),
+  AS("as-merguez","Assiette merguez (3)",9.00,"merguez","3 merguez"),
+  AS("as-steak","Assiette steak haché",9.00,"steak","Steak haché"),
+  AS("as-mex","Assiette mexicanos",9.00,"chili","Mexicanos"),
+  AS("as-bpoulet","Assiette poulet",9.50,"skewer","Poulet"),
+  AS("as-bboeuf","Assiette brochette bœuf",12.00,"skewer","Brochette de bœuf"),
+  AS("as-mixte","Assiette mixte",13.50,"plate","Steak, kebab, poulet, merguez"),
+  AS("as-cotelettes","Assiette côtelettes d'agneau",13.50,"steak","Côtelettes d'agneau"),
+  AS("as-bagneau","Assiette brochette d'agneau",13.50,"skewer","Brochette d'agneau"),
+  AS("as-entrecote","Assiette entrecôte",14.50,"steak","Entrecôte"),
+  AS("as-tenders","Assiette tenders",null,"tenders","5 tenders"),
+ ]},
+ {cat:"Pains pizza", items:[
+  {id:"pp-viande",n:"Pain pizza viande + frites",p:7.00,e:"pizzabread",d:"Pain, sauce provençale, viande au choix, mozzarella + frites",ch:{t:"Viande",o:PIZZA_MEATS},fr:true,x:true,sup:true,pop:true},
+  {id:"pp-fromage",n:"Pain pizza fromage + frites",p:7.00,e:"pizzabread",d:"Pain, sauce, mozzarella, maroilles ou chèvre + frites",ch:{t:"Fromage",o:["Maroilles","Chèvre"]},fr:true,x:true,sup:true},
+ ]},
+ {cat:"Viandes seules", items:[
+  {id:"vs-kebab",n:"Barquette kebab",p:5.50,e:"box",d:"Viande kebab seule, en barquette",s:1,x:true},
+  {id:"vs-poulet",n:"Barquette poulet",p:6.50,e:"box",d:"Poulet seul, en barquette",s:1,x:true},
+  {id:"vs-tenders",n:"Barquette tenders (6)",p:7.50,e:"tenders",d:"6 tenders, en barquette",s:1,x:true},
+ ]},
+ {cat:"Tex Mex", items:[
+  {id:"tm-fric",n:"Fricandelle",p:null,e:"merguez",d:"Saucisse de viande hachée, spécialité du Nord",x:true},
+  {id:"tm-nuggets",n:"Nuggets (4)",p:null,e:"nuggets",d:"4 nuggets de poulet",x:true},
+  {id:"tm-mex",n:"Mexicanos",p:null,e:"chili",d:"Saucisses de viande hachée façon Tex Mex",x:true},
+  {id:"tm-merguez",n:"Merguez",p:null,e:"merguez",d:"Saucisse de viande hachée épicée",x:true},
+  {id:"tm-tenders",n:"Tenders (4)",p:null,e:"tenders",d:"4 tenders de poulet",x:true},
+ ]},
+ {cat:"Frites", items:[
+  {id:"fr-grande",n:"Grande frites",p:null,e:"fries",d:"Frites fraîches",x:true},
  ]},
  {cat:"Menu enfant", items:[
-  {id:"me-enfant", n:"Menu enfant", p:9.60, e:"kid", d:"Petit plat, frites et boisson", s:1},
+  {id:"me-enfant",n:"Menu enfant",p:7.00,e:"kid",d:"Viande kebab, hamburger, steak, fricandelle, nuggets ou tenders + frites + Capri-Sun, avec surprise",ch:{t:"Au choix",o:KID_CHOICES},fr:true},
  ]},
- {cat:"Desserts & boissons", items:[
-  {id:"de-tiramisu", n:"Tiramisu", p:3.50, e:"cake", d:"Fait maison"},
-  {id:"bo-canette", n:"Canette 33 cl", p:1.80, e:"can", d:"Coca-Cola, Fanta, Ice Tea, Oasis…"},
-  {id:"bo-bouteille", n:"Bouteille 50 cl", p:2.50, e:"bottle", d:"Eau, soda…"},
+ {cat:"Desserts", items:[
+  {id:"de-tiramisu",n:"Tiramisu",p:3.50,e:"cake",d:"Tiramisu individuel"},
+  {id:"de-daim",n:"Tarte au Daim",p:null,e:"cake",d:"Tarte au chocolat et au caramel avec éclats de Daim"},
+  {id:"de-magnum-baton",n:"Magnum bâtonnet Amande 120 ml",p:null,e:"icecream",d:"Glace vanille enrobée de chocolat et d'amandes"},
+  {id:"de-bj",n:"Pot Ben & Jerry's",p:null,e:"icepot",d:"Pot de glace 465 ml (Sundae 427 ml), parfum au choix",ch:{t:"Parfum",o:["Half Baked","Cookie Dough","Vanilla Pecan Blondie","Caramel Brownie Party","Chocolate Fudge Brownie","Peanut Butter Cup","Sundae Dulce De-Lish (427 ml)"]}},
+  {id:"de-magnum-pot",n:"Pot Magnum 440 ml",p:null,e:"icepot",d:"Pot de glace 440 ml, parfum au choix",ch:{t:"Parfum",o:["Double Starchaser","Amande","White Chocolate & Cookies","Double Gold Caramel Billionaire","Double Sunlover","Double Caramel Salé"]}},
+ ]},
+ {cat:"Boissons", items:[
+  {id:"bo-canette",n:"Canette 33 cl",p:2.00,e:"can",d:"Coca-Cola, Fanta, Oasis, Ice Tea, 7 Up…",ch:{t:"Boisson",o:DRINKS},pop:false},
+  {id:"bo-eau",n:"Bouteille d'eau",p:1.50,e:"bottle",d:"Eau minérale"},
+  {id:"bo-coca-maxi",n:"Coca-Cola 1,5 L",p:4.00,e:"bottle",d:"Bouteille 1,5 L"},
+  {id:"bo-oasis-maxi",n:"Oasis Tropical 2 L",p:4.00,e:"bottle",d:"Bouteille 2 L"},
  ]},
 ];
 
@@ -715,7 +861,7 @@ const DAYS = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"]
 
 /* ========================================================= */
 const $ = s => document.querySelector(s);
-const eur = n => "X €"; /* maquette : prix masqués */
+const eur = n => n==null ? "Prix à confirmer" : n.toFixed(2).replace(".",",")+" €";
 const fmtMin = m => String(Math.floor(m/60)).padStart(2,"0")+"h"+String(m%60).padStart(2,"0");
 const ALL = MENU.flatMap(c=>c.items);
 const byId = id => ALL.find(i=>i.id===id);
@@ -729,11 +875,10 @@ document.querySelectorAll("[data-halal]").forEach(el=>el.innerHTML=HALAL_SVG);
 document.querySelectorAll("[data-halal] svg").forEach(s=>{s.style.width="100%";s.style.height="100%";});
 document.querySelectorAll(".proof [data-halal]").forEach(el=>{el.style.width="58px";el.style.height="58px";el.style.display="inline-block";});
 
-let cart = LS.get("kf-cart4",[]);
-const saveCart = ()=>LS.set("kf-cart4",cart);
+let cart = LS.get("kf-cart6",[]);
+const saveCart = ()=>LS.set("kf-cart6",cart);
 
 /* Ticker */
-$("#tick").innerHTML = Array(2).fill(["Kebab","Galettes","Livraison Cambrésis","Assiettes","Tacos à composer","Burgers","À emporter","Pains pizza","Paninis","Cambrai"].map(w=>`<span>${w} <b style="opacity:.55">•</b></span>`).join("")).join("");
 $("#yr").textContent = new Date().getFullYear();
 
 /* ---------- Horaires, ouverture, précommande ---------- */
@@ -769,7 +914,7 @@ function slots(){
   [0,1].forEach(off=>{
     (HOURS[dayOf(off)]||[]).forEach(([a,b])=>{
       let start = a+15;
-      if(off===0) start=Math.max(start, Math.ceil((nowMin()+PREP_MIN)/15)*15);
+      if(off===0) start=Math.max(start, Math.ceil((nowMin()+delayOf(order.mode))/15)*15);
       for(let m=start;m<=b-15;m+=15) out.push({off,m});
     });
   });
@@ -793,21 +938,16 @@ $("#ztable").innerHTML=ZONES.map((z,i)=>`<tr><td><span class="zdot" style="backg
 const communeOptions = sel => `<option value="">Choisissez votre commune…</option>`+COMMUNES.map(([n,km])=>`<option ${sel===n?"selected":""}>${esc(n)}</option>`).join("");
 $("#zSelect").innerHTML=communeOptions("");
 $("#zSelect").onchange=e=>{const r=zoneText(e.target.value),el=$("#zRes");if(!r){el.className="zres";return;}el.className="zres "+(r.ok?"ok":"ko");el.textContent=(r.ok?"✅ ":"⛔ ")+r.msg;};
-$("#radar").innerHTML=[...ZONES].reverse().map(z=>{const s=z.max/MAX_KM*100;return `<div style="width:${s}%;height:${s}%;background:${z.color};opacity:.85"></div>`;}).join("")
-  +`<div style="width:16px;height:16px;background:var(--ink);border:3px solid #fff"></div>`
-  +ZONES.map(z=>`<span class="lbl" style="top:${50-z.max/MAX_KM*50+1}%">${z.max} km</span>`).join("");
 
 /* ---------- Carte ---------- */
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g,"-");
 $("#cats").innerHTML = `<button class="cat active" data-cat="populaires">⭐ Populaires</button>`+MENU.map(c=>`<button class="cat" data-cat="${slug(c.cat)}">${c.cat}</button>`).join("");
-const card = i => `<button class="item" data-id="${i.id}">
-  <div class="emo">${art(i.e)}</div>
-  <div class="txt">${i.pop?'<span class="tag">Populaire</span>':''}${i.tacos?'<span class="tag" style="background:var(--flame);color:#fff">À composer</span>':''}
-    <span class="name">${i.n}</span><span class="desc">${i.d}</span>
-    <div class="row"><span class="price">${i.tacos?"dès ":""}${eur(i.p)}${i.f?' <span class="menu-ok">Menu dispo</span>':""}</span><span class="add">+</span></div>
-  </div></button>`;
+const card = i => `<button class="item ue-item" data-id="${i.id}">
+  <div class="ue-txt"><span class="name">${i.n}</span><span class="price">${eur(i.p)}</span><span class="desc">${i.d}</span>${i.fr?'<span class="pop">Frites fraîches incluses</span>':""}</div>
+  <div class="ue-img">${pic(i.id,i.e)}<span class="ue-plus">+</span></div></button>`;
+const popCard = i => `<button class="item ue-pop" data-id="${i.id}"><div class="ue-img">${pic(i.id,i.e)}<span class="ue-plus">+</span></div><span class="name">${i.n}</span><span class="price">${eur(i.p)}</span></button>`;
 $("#menu").innerHTML =
-  `<div class="cat-block" id="cat-populaires"><h3>Les plus commandés <small>d'après Uber Eats</small></h3><div class="grid">${ALL.filter(i=>i.pop).map(card).join("")}</div></div>`+
+  `<div class="cat-block" id="cat-populaires"><h3>Les plus commandés</h3><div class="pop-row">${ALL.filter(i=>i.pop).map(popCard).join("")}</div></div>`+
   MENU.map(c=>`<div class="cat-block" id="cat-${slug(c.cat)}"><h3>${c.cat}</h3><div class="grid">${c.items.map(card).join("")}</div></div>`).join("");
 
 document.querySelectorAll(".cat").forEach(b=>b.onclick=()=>{
@@ -828,11 +968,10 @@ addEventListener("scroll",()=>{
 },{passive:true});
 
 /* Avis Google : emplacements */
-$("#revGrid").innerHTML=Array(3).fill(`<div class="rev-card"><div class="who"><div class="av"></div><div style="flex:1"><div class="sk" style="width:55%"></div><div class="sk" style="width:35%;margin:0"></div></div></div><div class="stars" style="font-size:16px">★★★★★</div><div class="sk" style="margin-top:10px"></div><div class="sk"></div><div class="sk" style="width:70%"></div></div>`).join("");
 
 /* ---------- Overlays ---------- */
 function openLayer(el){$("#scrim").classList.add("on");el.classList.add("on");document.body.style.overflow="hidden";}
-function closeAll(){["#scrim","#modal","#drawer"].forEach(s=>$(s).classList.remove("on"));document.body.style.overflow="";}
+function closeAll(){["#scrim","#modal","#drawer","#legal"].forEach(s=>$(s).classList.remove("on"));document.body.style.overflow="";}
 $("#scrim").onclick=closeAll;
 document.querySelectorAll("[data-close]").forEach(b=>b.onclick=closeAll);
 addEventListener("keydown",e=>{if(e.key==="Escape")closeAll();});
@@ -843,40 +982,38 @@ let cur=null, sel, q=1;
 document.querySelectorAll(".item").forEach(b=>b.onclick=()=>openItem(byId(b.dataset.id)));
 function openItem(it){
   cur=it; q=1;
-  sel={formule:"seul",menuDrink:DRINKS[0],frites:false,sauces:[],sans:[],supOpen:{fromage:false,viande:false},cheeses:[],xmeats:[],xDrink:"",xDessert:"",size:"M",meats:[]};
-  $("#mEmo").innerHTML=art(it.e); $("#mName").textContent=it.n; $("#mDesc").textContent=it.d+(it.f&&!it.tacos?" · servi sans frites":"");
+  sel={choice:"",kidDrink:"",sauce:"",fSauces:[],size:"M",meats:[],sans:[],supOpen:{fromage:false,viande:false},cheeses:[],xmeats:[],xDrink:""};
+  $("#mEmo").innerHTML=pic(it.id,it.e); $("#mEmo").classList.toggle("has-ph",!!PHOTO[it.id]); $("#mPrice").textContent=eur(it.p);
+  $("#mName").textContent=it.n; $("#mDesc").textContent=it.d;
   renderModal(); openLayer($("#modal")); $("#modal").scrollTop=0;
 }
-const chip=(label,on,k,v,cls="")=>`<button class="chip ${cls}${on?" on":""}" data-k="${k}" data-v="${esc(v)}">${label}</button>`;
-const sizeObj = ()=>TACOS_SIZES.find(s=>s.k===sel.size);
+const supLabel = v => v==null ? "prix à confirmer" : "+"+eur(v);
 function renderModal(){
-  const it=cur, menu=sel.formule==="menu"; let h="", n=0;
-  const H5=(t,small)=>`<h5><span>${it.tacos?`<span class="step-n">${++n}</span>`:""}${t}</span><small>${small}</small></h5>`;
+  const it=cur;
+  const row=(type,label,on,k,v,xp="",sub="")=>`<button class="chip ue-row${on?" on":""}" data-k="${k}" data-v="${esc(v)}"><span class="lab">${label}${sub?`<small>${sub}</small>`:""}</span>${xp?`<span class="xp">${xp}</span>`:""}<span class="ctl ${type}"></span></button>`;
+  const grp=(title,hint,req,done,rows)=>`<div class="og"><div class="og-h"><div><b>${title}</b><small>${hint}</small></div><span class="og-req ${req?(done?"ok":"need"):""}">${req?(done?"✓ Choisi":"Obligatoire"):"Facultatif"}</span></div>${rows}</div>`;
+  let h="";
+  if(it.ch) h+=grp(it.ch.t,"Choisissez-en 1",true,!!sel.choice,it.ch.o.map(o=>row("radio",o,sel.choice===o,"choice",o)).join(""));
+  if(it.kid) h+=grp("Boisson du menu","Choisissez-en 1",true,!!sel.kidDrink,DRINKS.map(d=>row("radio",d,sel.kidDrink===d,"kiddrink",d)).join(""));
   if(it.tacos){
-    const sz=sizeObj();
-    h+=H5("Taille","obligatoire")+`<div class="chips">${TACOS_SIZES.map(s=>chip(`<b>${s.n}</b><small>${s.v} viande${s.v>1?"s":""} · ${eur(s.p)}</small>`,sel.size===s.k,"size",s.k,"size")).join("")}</div>`;
-    h+=H5("Viandes",`<span class="counter">${sel.meats.length}/${sz.v}</span>`)+`<div class="chips">${TACOS_MEATS.map(m=>chip(m,sel.meats.includes(m),"meat",m)).join("")}</div>`;
-  }
-  if(it.f){
-    h+=H5("Formule","obligatoire")+`<div class="chips">${chip("Seul · "+eur(),!menu,"formule","seul")}${chip("🍟🥤 En menu (+ frites + boisson) · +"+eur(),menu,"formule","menu")}</div>`;
-    if(menu) h+=`<h5>Boisson du menu <small>1 au choix</small></h5><div class="chips">${DRINKS.map(d=>chip(d,sel.menuDrink===d,"mdrink",d)).join("")}</div>`;
-    else if(!it.tacos) h+=`<h5>Accompagnement <small>optionnel</small></h5><div class="chips">${chip("🍟 Ajouter des frites · +"+eur(),sel.frites,"frites","1")}</div>`;
+    const sz=TACOS_SIZES.find(x=>x.k===sel.size);
+    h+=grp("Taille","Choisissez-en 1",true,true,TACOS_SIZES.map(x=>row("radio",x.n,sel.size===x.k,"size",x.k,eur(x.p),`${x.v} viande${x.v>1?"s":""}`)).join(""));
+    h+=grp("Viandes",`Choisissez-en ${sz.v} (${sel.meats.length}/${sz.v})`,true,sel.meats.length===sz.v,TACOS_MEATS.map(m=>row("check",m,sel.meats.includes(m),"meat",m)).join(""));
   }
   if(it.s){
-    h+=H5("Sauces",`jusqu'à ${it.s===1?"une":"deux"}`)+`<div class="chips">${SAUCES.map(s=>chip(s,sel.sauces.includes(s),"sauce",s)).join("")}</div>`;
-    if(!it.tacos) h+=`<h5>Retirer un ingrédient <small>optionnel</small></h5><div class="chips">${SANS.map(s=>chip(s,sel.sans.includes(s),"sans",s)).join("")}</div>`;
+    h+=grp(it.plate?"Sauce pour les frites":"Sauce","1 sauce incluse",true,!!sel.sauce,["Sans sauce",...SAUCES].map(x=>row("radio",x,sel.sauce===x,"sauce",x)).join(""));
+    if(!it.tacos && !it.id.startsWith("vs-")) h+=grp("Retirer un ingrédient","",false,false,SANS.map(x=>row("check",x,sel.sans.includes(x),"sans",x)).join(""));
   }
+  if(it.fr) h+=grp(it.plate?"Sauce en plus":"Sauce pour les frites",`${supLabel(SUP.sauce)} par sauce`,false,false,SAUCES.map(x=>row("check",x,sel.fSauces.includes(x),"fsauce",x,supLabel(SUP.sauce))).join(""));
   if(it.sup){
-    h+=H5("Suppléments","optionnel")+`<div class="chips">${chip("🧀 Fromage · +"+eur(),sel.supOpen.fromage,"supopen","fromage")}${chip("🥩 Viande · +"+eur(),sel.supOpen.viande,"supopen","viande")}</div>`;
-    if(sel.supOpen.fromage) h+=`<div class="subchoice"><p class="xsub">Quel fromage ? <small>+${eur()} chacun</small></p><div class="chips">${CHEESES.map(c=>chip(c,sel.cheeses.includes(c),"cheese",c)).join("")}</div></div>`;
-    if(sel.supOpen.viande) h+=`<div class="subchoice"><p class="xsub">Quelle viande en plus ? <small>+${eur()} chacune</small></p><div class="chips">${ALL_MEATS.map(m=>chip(m,sel.xmeats.includes(m),"xmeat",m)).join("")}</div></div>`;
+    let rows=row("check","🧀 Supplément fromage",sel.supOpen.fromage,"supopen","fromage",supLabel(SUP.fromage));
+    if(sel.supOpen.fromage) rows+=`<div class="ue-sub">${CHEESES.map(c=>row("check",c,sel.cheeses.includes(c),"cheese",c,supLabel(SUP.fromage))).join("")}</div>`;
+    rows+=row("check","🥩 Supplément viande",sel.supOpen.viande,"supopen","viande","au choix");
+    if(sel.supOpen.viande) rows+=`<div class="ue-sub">${ALL_MEATS.map(m=>row("check",m,sel.xmeats.includes(m),"xmeat",m,supLabel(MEAT_SUP[m]))).join("")}</div>`;
+    h+=grp("Suppléments","Fromage ou viande en plus",false,false,rows);
   }
-  if(it.x){
-    h+=`<div class="extras"><h5>Envie d'un extra ? <small>avec supplément</small></h5>
-      <p class="xsub">🥤 Boisson en plus · +${eur()}</p><div class="chips">${DRINKS.map(d=>chip(d,sel.xDrink===d,"xdrink",d)).join("")}</div>
-      <p class="xsub">🍰 Dessert · +${eur()}</p><div class="chips">${DESSERTS.map(d=>chip(d,sel.xDessert===d,"xdessert",d)).join("")}</div></div>`;
-  }
-  if(!h) h=`<p style="color:var(--muted);font-size:14px">Aucune option pour ce produit.</p>`;
+  if(it.x) h+=grp("Ajouter une boisson","Choisissez-en 1",false,false,DRINKS.map(d=>row("radio",d,sel.xDrink===d,"xdrink",d,supLabel(SUP.canette),"Canette 33 cl")).join("")+row("radio","Eau",sel.xDrink==="Eau","xdrink","Eau",supLabel(SUP.eau),"Bouteille"));
+  if(!h) h=`<p style="color:var(--muted);font-size:14px;padding:14px 0">Aucune option pour ce produit.</p>`;
   const y=$("#modal").scrollTop;
   $("#mBody").innerHTML=h;
   $("#modal").scrollTop=y;
@@ -887,48 +1024,48 @@ $("#mBody").addEventListener("click",e=>{
   const c=e.target.closest(".chip"); if(!c) return;
   const k=c.dataset.k, v=c.dataset.v, it=cur;
   switch(k){
-    case "formule": sel.formule=v; break;
-    case "mdrink": sel.menuDrink=v; break;
-    case "frites": sel.frites=!sel.frites; break;
-    case "sauce": {const a=sel.sauces; if(a.includes(v)) toggle(a,v); else if(a.length>=it.s){ if(it.s===1){a.length=0;a.push(v);} else return toast("Deux sauces maximum"); } else a.push(v); break;}
+    case "choice": sel.choice=v; break;
+    case "kiddrink": sel.kidDrink=v; break;
+    case "sauce": sel.sauce=v; break;
+    case "fsauce": toggle(sel.fSauces,v); break;
+    case "size": sel.size=v; sel.meats=sel.meats.slice(0,TACOS_SIZES.find(x=>x.k===v).v); break;
+    case "meat": {const a=sel.meats, max=TACOS_SIZES.find(x=>x.k===sel.size).v; if(a.includes(v)) toggle(a,v); else if(a.length>=max){ if(max===1){a.length=0;a.push(v);} else return toast(`${max} viandes maximum pour cette taille`);} else a.push(v); break;}
     case "sans": toggle(sel.sans,v); break;
     case "supopen": sel.supOpen[v]=!sel.supOpen[v]; if(!sel.supOpen[v]){ if(v==="fromage") sel.cheeses=[]; else sel.xmeats=[]; } break;
     case "cheese": toggle(sel.cheeses,v); break;
     case "xmeat": toggle(sel.xmeats,v); break;
     case "xdrink": sel.xDrink=sel.xDrink===v?"":v; break;
-    case "xdessert": sel.xDessert=sel.xDessert===v?"":v; break;
-    case "size": sel.size=v; sel.meats=sel.meats.slice(0,sizeObj().v); break;
-    case "meat": {const a=sel.meats, max=sizeObj().v; if(a.includes(v)) toggle(a,v); else if(a.length>=max){ if(max===1){a.length=0;a.push(v);} else return toast(`${max} viandes maximum pour cette taille`); } else a.push(v); break;}
   }
   renderModal();
 });
 function unitPrice(){
-  let p = cur.tacos ? sizeObj().p : cur.p;
-  if(cur.f){ if(sel.formule==="menu") p+=SUP.menu; else if(sel.frites) p+=SUP.frites; }
-  p += sel.cheeses.length*SUP.fromage + sel.xmeats.length*SUP.viande;
-  if(sel.xDrink) p+=SUP.boisson; if(sel.xDessert) p+=SUP.dessert;
+  let p = cur.tacos ? TACOS_SIZES.find(x=>x.k===sel.size).p : cur.p;
+  if(p==null) return null;
+  p += sel.fSauces.length*(SUP.sauce||0);
+  p += sel.cheeses.length*SUP.fromage + sel.xmeats.reduce((a,m)=>a+(MEAT_SUP[m]||0),0);
+  if(sel.xDrink) p+= sel.xDrink==="Eau" ? SUP.eau : SUP.canette;
   return p;
 }
-function updModal(){$("#mQty").textContent=q;$("#mAdd").textContent="Ajouter · "+eur(unitPrice()*q);}
+function updModal(){const u=unitPrice();$("#mQty").textContent=q;$("#mAdd").textContent=`Ajouter ${q} au panier · ${eur(u==null?null:u*q)}`;}
 $("#mMinus").onclick=()=>{if(q>1){q--;updModal();}};
 $("#mPlus").onclick=()=>{q++;updModal();};
 $("#mAdd").onclick=()=>{
   const it=cur, opts=[]; let name=it.n;
-  if(it.tacos){
-    const sz=sizeObj();
-    if(sel.meats.length<sz.v) return toast(`Choisissez ${sz.v} viande${sz.v>1?"s":""} (${sel.meats.length}/${sz.v})`);
-    name=sz.n; opts.push("Viandes : "+sel.meats.join(", "));
-  }
-  if(it.f) opts.push(sel.formule==="menu"?`En menu : frites + ${sel.menuDrink}`:(it.tacos?"Seul":(sel.frites?"Seul + frites":"Seul, sans frites")));
-  if(sel.sauces.length) opts.push("Sauce : "+sel.sauces.join(", "));
-  opts.push(...sel.sans);
+  if(it.tacos){ const sz=TACOS_SIZES.find(x=>x.k===sel.size); if(sel.meats.length<sz.v) return toast(`Choisissez ${sz.v} viande${sz.v>1?"s":""} (${sel.meats.length}/${sz.v})`); name=sz.n; opts.push("Viandes : "+sel.meats.join(", ")); }
+  if(it.s && !sel.sauce) return toast("Choisissez votre sauce");
+  if(it.ch && !sel.choice) return toast(`Choisissez : ${it.ch.t.toLowerCase()}`);
+  if(it.kid && !sel.kidDrink) return toast("Choisissez la boisson du menu");
   if(sel.supOpen.fromage&&!sel.cheeses.length) return toast("Choisissez votre fromage");
   if(sel.supOpen.viande&&!sel.xmeats.length) return toast("Choisissez la viande en plus");
+  if(sel.choice) opts.push(`${it.ch.t} : ${sel.choice}`);
+  if(sel.kidDrink) opts.push("Boisson : "+sel.kidDrink);
+  if(sel.sauce) opts.push("Sauce : "+sel.sauce);
+  if(sel.fSauces.length) opts.push("+ Sauce frites : "+sel.fSauces.join(", "));
+  opts.push(...sel.sans);
   if(sel.cheeses.length) opts.push("+ Fromage : "+sel.cheeses.join(", "));
   if(sel.xmeats.length) opts.push("+ Viande : "+sel.xmeats.join(", "));
-  if(sel.xDrink) opts.push("+ Boisson : "+sel.xDrink);
-  if(sel.xDessert) opts.push("+ Dessert : "+sel.xDessert);
-  flyToCart($("#mEmo"), it.e);
+  if(sel.xDrink) opts.push(sel.xDrink==="Eau"?"+ Bouteille d'eau":"+ Canette : "+sel.xDrink);
+  flyToCart($("#mEmo"), it.e, it.id);
   addLine({id:it.id,n:name,e:it.e,opts,q,u:unitPrice()});
   closeAll(); toast(`${q} × ${name} ajouté`);
 };
@@ -941,13 +1078,13 @@ function addLine(l){
 
 /* ---------- Recommander ---------- */
 function renderReorder(){
-  const last=LS.get("kf-last2",null), el=$("#reorder");
+  const last=LS.get("kf-last4",null), el=$("#reorder");
   if(!last||!last.length){el.classList.remove("show");return;}
   el.classList.add("show");
   $("#reorderTxt").textContent=last.map(l=>`${l.q} × ${l.n}`).join(", ");
 }
 $("#reorderBtn").onclick=()=>{
-  const last=LS.get("kf-last2",[]); if(!last.length) return;
+  const last=LS.get("kf-last4",[]); if(!last.length) return;
   last.forEach(l=>addLine({...l}));
   toast("Dernière commande ajoutée au panier");
   if(innerWidth<1100){step="cart";renderCart();openLayer($("#drawer"));}
@@ -955,15 +1092,16 @@ $("#reorderBtn").onclick=()=>{
 
 /* ---------- Panier & commande ---------- */
 let step="cart";
-let order={mode:"collect",slot:"",name:"",tel:"",commune:"",street:"",note:"",pay:"boutique",promo:"",promoOk:false};
-const subtotal=()=>cart.reduce((s,l)=>s+l.u*l.q,0);
+let order={mode:"delivery",slot:"",name:"",tel:"",email:"",commune:"",street:"",note:"",pay:"cb"};
+const subtotal=()=>cart.reduce((s,l)=>s+(l.u||0)*l.q,0);
+const lineTotal=l=>l.u==null?null:l.u*l.q;
+const pendingNote=()=>cart.some(l=>l.u==null)?`<p class="mini-note">Certains prix sont à confirmer : non comptés dans le total.</p>`:"";
 const count=()=>cart.reduce((s,l)=>s+l.q,0);
 const deliveryInfo=()=>order.mode==="delivery"&&order.commune?zoneText(order.commune):null;
 const fee=()=>{const z=deliveryInfo();return z&&z.ok?z.fee:0;};
-const discount=()=>order.promoOk?PROMO.value:0;
-const total=()=>Math.max(0,subtotal()+fee()-discount());
+const total=()=>cart.length?subtotal()+fee()+SERVICE_FEE-payDiscount():0;
 
-const linesHTML=()=>cart.map((l,i)=>`<div class="line"><div class="l-ill">${art(l.e)}</div><div class="l-txt"><div class="l-name">${esc(l.n)}</div>${l.opts.length?`<div class="l-opt">${esc(l.opts.join(" · "))}</div>`:""}<div class="qty"><button data-m="${i}">−</button><span>${l.q}</span><button data-p="${i}">+</button></div></div><div class="l-price">${eur(l.u*l.q)}</div></div>`).join("");
+const linesHTML=()=>cart.map((l,i)=>`<div class="line"><div class="l-ill${PHOTO[l.id]?" has-ph":""}">${pic(l.id,l.e)}</div><div class="l-txt"><div class="l-name">${esc(l.n)}</div>${l.opts.length?`<div class="l-opt">${esc(l.opts.join(" · "))}</div>`:""}<div class="qty"><button data-m="${i}">−</button><span>${l.q}</span><button data-p="${i}">+</button></div></div><div class="l-price">${eur(lineTotal(l))}</div></div>`).join("");
 function bindQty(root){
   root.addEventListener("click",e=>{
     const m=e.target.closest("[data-m]"), p=e.target.closest("[data-p]");
@@ -980,11 +1118,14 @@ function renderSide(){
   const sc=$("#sideCart");
   sc.innerHTML=`<div class="sc-head">Votre commande <small>${count()} article${count()>1?"s":""}</small></div>
     <div class="sc-body">${cart.length?linesHTML():emptyHTML()}</div>
-    <div class="sc-foot">${cart.length?`${isOpen()?"":`<p class="mini-note">🌙 Fermé : votre commande sera une précommande.</p>`}<div class="totals big"><span>Sous-total</span><span>${eur(subtotal())}</span></div><button class="btn btn-primary full" id="sideGo">Commander · ${eur(subtotal())}</button>`:`<p class="mini-note" style="margin:0">À emporter ou livré dans le Cambrésis (jusqu'à ${MAX_KM} km).</p>`}</div>`;
+    <div class="sc-foot">${cart.length?`${isOpen()?"":`<p class="mini-note">🌙 Fermé : votre commande sera une précommande.</p>`}${pendingNote()}<div class="totals big"><span>Sous-total</span><span>${eur(subtotal())}</span></div><button class="btn btn-primary full" id="sideGo">Commander · ${eur(subtotal())}</button>`:`<p class="mini-note" style="margin:0">À emporter ou livré dans le Cambrésis (jusqu'à ${MAX_KM} km).</p>`}</div>`;
   const go=$("#sideGo"); if(go) go.onclick=()=>{step="checkout";renderCart();openLayer($("#drawer"));};
 }
 
+function syncMode(){document.querySelectorAll("#modeToggle button").forEach(b=>b.classList.toggle("on",b.dataset.mode===order.mode)); $("#chipDelay").textContent=delayText(order.mode); $("#chipDelayLbl").textContent=order.mode==="delivery"?"Livraison":"À emporter";}
+document.querySelectorAll("#modeToggle button").forEach(b=>b.onclick=()=>{order.mode=b.dataset.mode;renderCart();});
 function renderCart(){
+  syncMode();
   $("#cartCount").textContent=count(); $("#fcCount").textContent=count(); $("#fcTotal").textContent=eur(subtotal());
   $("#floatCart").classList.toggle("show",count()>0);
   renderSide(); renderReorder(); updateTrackBtn();
@@ -999,7 +1140,8 @@ function renderStepCart(){
     return;
   }
   $("#dBody").innerHTML=closedNote()+linesHTML();
-  $("#dFoot").innerHTML=`<div class="totals big"><span>Sous-total</span><span>${eur(subtotal())}</span></div>
+  $("#dFoot").innerHTML=`${pendingNote()}<div class="totals big"><span>Sous-total</span><span>${eur(subtotal())}</span></div>
+    <p class="mini-note" style="margin:2px 0 8px">+ ${eur(SERVICE_FEE)} de frais de service · 💡 −${eur(PAY_DISCOUNT)} si vous payez ${order.mode==="delivery"?"à la livraison":"au retrait"} (espèces ou carte)${order.mode==="delivery"?" · frais de livraison selon la commune":""}.</p>
     <button class="btn btn-primary full" id="toCheckout">${isOpen()?"Commander":"Précommander"} · ${eur(subtotal())}</button>`;
   $("#toCheckout").onclick=()=>{step="checkout";renderCart();};
 }
@@ -1021,44 +1163,37 @@ function renderStepCheckout(){
     <select class="f-in" id="fSlot">${sl.map(s=>`<option value="${s.off}|${s.m}" ${order.slot===s.off+"|"+s.m?"selected":""}>${asap(s)?"Dès que possible (~"+fmtMin(s.m)+")":slotLabel(s)}</option>`).join("")}</select>
     <label class="f">Prénom</label><input class="f-in" id="fName" value="${esc(order.name)}" placeholder="Votre prénom" autocomplete="given-name">
     <label class="f">Téléphone</label><input class="f-in" id="fTel" value="${esc(order.tel)}" placeholder="06 12 34 56 78" type="tel" autocomplete="tel">
+    <label class="f">E-mail <small style="font-weight:400;color:var(--muted)">· pour recevoir la confirmation</small></label><input class="f-in" id="fEmail" value="${esc(order.email)}" placeholder="vous@exemple.fr" type="email" autocomplete="email">
     <label class="f">Note pour la cuisine</label><input class="f-in" id="fNote" value="${esc(order.note)}" placeholder="Bien cuit, sans piment…">
-    <label class="f">Code promo</label>
-    <div class="promo-row"><input class="f-in" id="fPromo" value="${esc(order.promo)}" placeholder="Ex. BIENVENUE"><button class="btn btn-dark" id="applyPromo">${order.promoOk?"Retirer":"Appliquer"}</button></div>
-    ${order.promoOk?`<p class="promo-ok">✓ ${PROMO.code} : −${eur()} sur votre 1re commande en ligne</p>`:`<p class="mini-note" style="margin-top:6px">1re commande en ligne ? Essayez le code BIENVENUE.</p>`}
     <label class="f">Paiement</label>
     <div class="pay">
-      <label><input type="radio" name="pay" value="boutique" ${order.pay==="boutique"?"checked":""}> ${del?"À la livraison":"Au retrait"} : CB, espèces, titres-restaurant</label>
-      <label><input type="radio" name="pay" value="cb" ${order.pay==="cb"?"checked":""}> Carte bancaire en ligne <small style="color:var(--muted)">(à brancher : Stripe / SumUp)</small></label>
+      <label><input type="radio" name="pay" value="cb" ${order.pay==="cb"?"checked":""}> 💳 Carte bancaire en ligne <small style="color:var(--muted)">· paiement sécurisé</small></label>
+      <label><input type="radio" name="pay" value="boutique" ${order.pay==="boutique"?"checked":""}> 🤝 ${del?"À la livraison":"Au retrait"} : espèces ou carte <b style="color:var(--herb)">−${eur(PAY_DISCOUNT)}</b></label>
     </div>`;
   $("#back").onclick=()=>{grab();step="cart";renderCart();};
   $("#dBody").querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{grab();order.mode=b.dataset.mode;renderCart();});
   const fc=$("#fCommune"); if(fc) fc.onchange=()=>{grab();renderCart();};
-  $("#applyPromo").onclick=()=>{
-    grab();
-    if(order.promoOk){order.promoOk=false;order.promo="";return renderCart();}
-    const c=order.promo.trim().toUpperCase();
-    if(c!==PROMO.code) return toast("Code promo invalide");
-    if(LS.get("kf-promo-used",false)) return toast("Code réservé à la 1re commande en ligne");
-    order.promoOk=true; order.promo=c; toast("Code appliqué 🎉"); renderCart();
-  };
+  $("#dBody").querySelectorAll("input[name=pay]").forEach(r=>r.onchange=()=>{grab();renderCart();});
   let warn="";
   if(noCommune) warn="Choisissez votre commune pour la livraison.";
   else if(horsZone) warn=`Hors zone : on livre jusqu'à ${MAX_KM} km. Passez en « À emporter ».`;
   else if(tooLow) warn=`Minimum ${eur(MIN_DELIVERY)} de commande pour la livraison.`;
   $("#dFoot").innerHTML=`
-    <div class="totals"><span>Sous-total</span><span>${eur(subtotal())}</span></div>
+    ${pendingNote()}<div class="totals"><span>Sous-total</span><span>${eur(subtotal())}</span></div>
+    <div class="totals"><span>Frais de service</span><span>${eur(SERVICE_FEE)}</span></div>
+    ${payDiscount()?`<div class="totals discount"><span>Réduction paiement ${del?"à la livraison":"au retrait"}</span><span>−${eur(payDiscount())}</span></div>`:""}
     ${del?`<div class="totals"><span>Livraison${z&&z.ok?` · zone ${z.z+1} (~${z.km} km)`:""}</span><span>${z&&z.ok?eur(fee()):"—"}</span></div>`:""}
-    ${order.promoOk?`<div class="totals discount"><span>Code ${PROMO.code}</span><span>−${eur(discount())}</span></div>`:""}
     <div class="totals big"><span>Total</span><span>${eur(total())}</span></div>
     ${warn?`<p class="warn">${warn}</p>`:""}
-    <button class="btn btn-primary full" id="place" ${warn?"disabled":""}>${isOpen()?"Valider la commande":"Valider la précommande"}</button>`;
+    <p class="mini-note" style="margin:4px 0 8px">En commandant, vous acceptez nos <a href="#" data-legal="cgv">CGV</a>. Plats préparés à la demande : pas de droit de rétractation.</p>
+    <button class="btn btn-primary full" id="place" ${warn?"disabled":""}>${order.pay==="cb"?"Commander et payer":"Commander avec obligation de paiement"} · ${eur(total())}</button>`;
   $("#place").onclick=place;
 }
 function grab(){
   const v=s=>{const el=$(s);return el?el.value:undefined;};
-  order.slot=v("#fSlot")??order.slot; order.name=v("#fName")??order.name; order.tel=v("#fTel")??order.tel;
+  order.slot=v("#fSlot")??order.slot; order.name=v("#fName")??order.name; order.tel=v("#fTel")??order.tel; order.email=v("#fEmail")??order.email;
   order.commune=v("#fCommune")??order.commune; order.street=v("#fStreet")??order.street;
-  order.note=v("#fNote")??order.note; order.promo=v("#fPromo")??order.promo;
+  order.note=v("#fNote")??order.note;
   const p=document.querySelector("input[name=pay]:checked"); if(p)order.pay=p.value;
 }
 function place(){
@@ -1066,20 +1201,20 @@ function place(){
   const del=order.mode==="delivery";
   if(!order.name.trim()) return toast("Indiquez votre prénom");
   if(!/^(\+33|0)[1-9](\s?\d{2}){4}$/.test(order.tel.trim())) return toast("Numéro de téléphone invalide");
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(order.email.trim())) return toast("Adresse e-mail invalide");
   if(del&&order.street.trim().length<4) return toast("Indiquez votre rue et numéro");
   const [off,m]=order.slot.split("|").map(Number), z=deliveryInfo();
   const o={
     num:"KF-"+Math.floor(1000+Math.random()*9000), created:Date.now(), status:"recue",
     mode:order.mode, when:slotLabel({off,m}), pre:!isOpen(),
-    name:order.name.trim(), tel:order.tel.trim(), note:order.note.trim(), pay:order.pay,
+    name:order.name.trim(), tel:order.tel.trim(), email:order.email.trim(), service:SERVICE_FEE, discount:payDiscount(), note:order.note.trim(), pay:order.pay,
     address:del?`${order.street.trim()}, ${order.commune}`:"", zone:del&&z?`Zone ${z.z+1} · ~${z.km} km`:"",
-    promo:order.promoOk?PROMO.code:"", lines:cart.map(({n,e,opts,q,u})=>({n,e,opts,q,u})), total:total()
+    lines:cart.map(({n,e,opts,q,u})=>({n,e,opts,q,u})), total:total()
   };
   /* EN PRODUCTION : envoyer `o` au serveur (Supabase / Worker) + SMS/WhatsApp au restaurant */
   const orders=LS.get("kf-orders",[]); orders.push(o); LS.set("kf-orders",orders);
-  LS.set("kf-last2",cart.map(({id,n,e,opts,q,u})=>({id,n,e,opts,q,u})));
+  LS.set("kf-last4",cart.map(({id,n,e,opts,q,u})=>({id,n,e,opts,q,u})));
   LS.set("kf-active",o.num);
-  if(order.promoOk){LS.set("kf-promo-used",true);order.promoOk=false;order.promo="";}
   cart=[]; saveCart(); step="done"; renderCart();
 }
 
@@ -1098,9 +1233,11 @@ function renderTrack(){
     <h4>${o.status==="terminee"?"Merci et bon appétit !":o.pre?"Précommande enregistrée":"Commande envoyée 🎉"}</h4>
     <div class="when">${o.mode==="delivery"?"Livraison prévue":"Retrait prévu"} : <b>${esc(o.when)}</b></div>
     <div class="num">${o.num}</div>
+    ${o.email?`<p class="mini-note" style="text-align:center;margin:-4px 0 10px">📧 Confirmation envoyée à ${esc(o.email)}</p>`:""}
     <ul class="tsteps">${st.map((s,i)=>`<li class="${i<idx||o.status==="terminee"?"done":i===idx?"cur":""}"><i>${i<idx||o.status==="terminee"?"✓":i+1}</i>${s[1]}<small>${s[2]}</small></li>`).join("")}</ul>
-    <div class="recap">${o.lines.map(l=>`<div><span>${l.q} × ${esc(l.n)}</span><span>${eur(l.u*l.q)}</span></div>`).join("")}
-      ${o.promo?`<div style="color:var(--herb)"><span>Code ${o.promo}</span><span>−${eur()}</span></div>`:""}
+    <div class="recap">${o.lines.map(l=>`<div><span>${l.q} × ${esc(l.n)}</span><span>${eur(lineTotal(l))}</span></div>`).join("")}
+      ${o.service?`<div><span>Frais de service</span><span>${eur(o.service)}</span></div>`:""}
+      ${o.discount?`<div style="color:var(--herb)"><span>Réduction paiement ${o.mode==="delivery"?"à la livraison":"au retrait"}</span><span>−${eur(o.discount)}</span></div>`:""}
       <div style="font-weight:700;border-top:1px solid var(--line);margin-top:4px;padding-top:6px"><span>Total</span><span>${eur(o.total)}</span></div></div>
     <p class="demo-hint">Démo : ouvrez <a href="#cuisine">l'écran cuisine</a> pour faire avancer la commande, ce suivi se met à jour tout seul.</p>
   </div>`;
@@ -1122,7 +1259,19 @@ function beep(){
 }
 const NEXT = {recue:["preparation","Lancer la préparation"], preparation:[null,""], prete:["terminee","Récupérée ✓"], livraison:["terminee","Livrée ✓"]};
 function nextOf(o){ if(o.status==="preparation") return o.mode==="delivery"?["livraison","Partie en livraison 🛵"]:["prete","Prête ✓"]; return NEXT[o.status]||[null,""]; }
+function renderDelays(){
+  const d=delays(), rush=d.collect>DELAY_DEF.collect||d.delivery>DELAY_DEF.delivery;
+  $("#kvDelay").innerHTML=[["collect","🥡 Emporter"],["delivery","🛵 Livraison"]].map(([k,l])=>`<span class="dl ${d[k]>DELAY_DEF[k]?"rush":""}">${l}<button data-dl="${k}" data-v="-5" aria-label="Moins 5 minutes">−</button><b>${d[k]} min</b><button data-dl="${k}" data-v="5" aria-label="Plus 5 minutes">+</button></span>`).join("")+(rush?`<button class="kv-btn rst" data-dl="reset">Fin du rush</button>`:"");
+}
+$("#kvDelay").addEventListener("click",e=>{
+  const b=e.target.closest("[data-dl]"); if(!b) return;
+  let d=delays();
+  if(b.dataset.dl==="reset") d={...DELAY_DEF};
+  else d[b.dataset.dl]=Math.min(120,Math.max(10,d[b.dataset.dl]+Number(b.dataset.v)));
+  LS.set("kf-delays",d); renderDelays();
+});
 function renderKitchen(){
+  renderDelays();
   const orders=LS.get("kf-orders",[]);
   const fresh=orders.filter(o=>o.status==="recue"&&!knownNew.has(o.num));
   if(fresh.length){ fresh.forEach(o=>{knownNew.add(o.num);flashNew.add(o.num);}); if(sound) beep(); }
@@ -1133,7 +1282,7 @@ function renderKitchen(){
       const [nx,lbl]=nextOf(o), d=new Date(o.created);
       return `<div class="kcard ${flashNew.has(o.num)?"new":""}">
         <div class="kc-top"><span class="kc-num">${o.num}</span><span class="kc-mode ${o.mode==="delivery"?"del":""}">${o.mode==="delivery"?"🛵 Livraison":"🥡 À emporter"}</span></div>
-        <div class="kc-meta">${o.pre?"<b style='color:var(--mustard)'>PRÉCOMMANDE</b> · ":""}Pour <b>${esc(o.when)}</b> · reçue à ${fmtMin(d.getHours()*60+d.getMinutes())}<br>${esc(o.name)} · ${esc(o.tel)}${o.address?`<br>📍 ${esc(o.address)} · ${esc(o.zone)}`:""}<br>Paiement : ${o.pay==="cb"?"CB en ligne":"sur place / à la livraison"}${o.promo?` · code ${o.promo}`:""}</div>
+        <div class="kc-meta">${o.pre?"<b style='color:var(--mustard)'>PRÉCOMMANDE</b> · ":""}Pour <b>${esc(o.when)}</b> · reçue à ${fmtMin(d.getHours()*60+d.getMinutes())}<br>${esc(o.name)} · ${esc(o.tel)}${o.address?`<br>📍 ${esc(o.address)} · ${esc(o.zone)}`:""}<br>Paiement : ${o.pay==="cb"?"CB en ligne (payé)":`<b style='color:#fff'>à encaisser : ${eur(o.total)}</b>`}</div>
         <ul>${o.lines.map(l=>`<li><b>${l.q} × ${esc(l.n)}</b>${l.opts.length?`<small>${esc(l.opts.join(" · "))}</small>`:""}</li>`).join("")}</ul>
         ${o.note?`<div class="kc-note">📝 ${esc(o.note)}</div>`:""}
         <div class="kc-act">${nx?`<button data-adv="${o.num}" data-to="${nx}">${lbl}</button>`:""}<button class="sec" data-adv="${o.num}" data-to="terminee" title="Clôturer">✕</button></div>
@@ -1149,7 +1298,7 @@ $("#kvSound").onclick=()=>{sound=!sound;$("#kvSound").classList.toggle("on",soun
 $("#kvClear").onclick=()=>{LS.set("kf-orders",[]);LS.set("kf-active",null);knownNew.clear();flashNew.clear();renderKitchen();};
 $("#kvDemo").onclick=()=>{
   const o={num:"KF-"+Math.floor(1000+Math.random()*9000),created:Date.now(),status:"recue",mode:Math.random()<.5?"delivery":"collect",when:"Dès que possible",pre:false,name:"Client test",tel:"06 00 00 00 00",note:"",pay:"boutique",address:"",zone:"",promo:"",
-    lines:[{n:"Galette kebab",e:"wrap",opts:["En menu : frites + Coca-Cola","Sauce : Samouraï"],q:1,u:0},{n:"Tacos L",e:"tacos",opts:["Viandes : Poulet, Cordon bleu","Seul","+ Gratiné"],q:1,u:0}],total:0};
+    lines:[{n:"Libanais kebab + frites",e:"wrap",opts:["Sauce : Samouraï","+ Canette : Coca-Cola"],q:1,u:9},{n:"Assiette mixte",e:"plate",opts:["Sauce : Algérienne, Andalouse"],q:1,u:14.2}],total:23.2};
   if(o.mode==="delivery"){o.address="12 rue de Noyon, Cambrai";o.zone="Zone 1 · ~1 km";}
   const orders=LS.get("kf-orders",[]); orders.push(o); LS.set("kf-orders",orders); renderKitchen();
 };
@@ -1160,18 +1309,18 @@ const REDUCE=matchMedia("(prefers-reduced-motion: reduce)").matches;
 (function(){
   if(REDUCE||!("IntersectionObserver" in window)) return;
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12,rootMargin:"0px 0px -40px 0px"});
-  document.querySelectorAll(".sec-title,.mode,.item,.card,.rev-score,.rev-card,.reorder").forEach(el=>{
+  document.querySelectorAll(".item,.ue-card").forEach(el=>{
     const sib=[...el.parentElement.children].indexOf(el);
     el.classList.add("reveal"); el.style.transitionDelay=(sib%6)*70+"ms"; io.observe(el);
   });
 })();
 function bump(el){ if(!el) return; el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump"); }
-function flyToCart(srcEl,key){
+function flyToCart(srcEl,key,id){
   const vis=el=>el&&el.offsetParent!==null&&getComputedStyle(el).display!=="none";
   const target=[$("#sideCart .sc-head"),$("#floatBtn"),$("#openCart")].find(vis);
   if(!srcEl||!target||REDUCE){ bump($("#cartCount")); return; }
   const a=srcEl.getBoundingClientRect(), b=target.getBoundingClientRect();
-  const f=document.createElement("div"); f.className="flyer"; f.innerHTML=art(key);
+  const f=document.createElement("div"); f.className="flyer"; f.innerHTML=pic(id,key);
   f.style.left=(a.left+a.width/2-35)+"px"; f.style.top=(a.top+a.height/2-35)+"px";
   document.body.appendChild(f);
   const dx=b.left+b.width/2-(a.left+a.width/2), dy=b.top+b.height/2-(a.top+a.height/2);
@@ -1355,6 +1504,55 @@ function flyToCart(srcEl,key){
   }
 })();
 
+/* ---------- Pages légales ---------- */
+const T = x => `<span class="todo">${x}</span>`;
+const ALLERG = ["Gluten (pain, panure)","Crustacés","Œufs (mayonnaise, sauces)","Poissons","Arachides","Soja","Lait (fromages, sauce fromagère)","Fruits à coque (amandes…)","Céleri","Moutarde (sauces)","Graines de sésame (pain)","Sulfites","Lupin","Mollusques"];
+const LEGAL = {
+ mentions:()=>`<h2>Mentions légales</h2>
+  <h3>Éditeur du site</h3>
+  <p>GOURAYA, SAS au capital de ${T("[capital]")} €, exploitant le restaurant Le Koup'Faim<br>Siège : 16 rue du Général de Gaulle, 59400 Cambrai<br>Téléphone : 03 27 74 12 88 · E-mail : fahimnait@gmail.com<br>SIREN 802 633 644 · SIRET 802 633 644 00017 · RCS Douai 802 633 644<br>N° TVA intracommunautaire : FR07802633644<br>Code NAF : 56.10C (restauration de type rapide)<br>Directeur de la publication : M. Fahim Nait Slimane, président</p>
+  <h3>Hébergement</h3>
+  <p>Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, États-Unis · cloudflare.com</p>
+  <h3>Conception</h3>
+  <p>Site réalisé par NK Digital · contact@nkdigital.fr</p>
+  <h3>Notes affichées</h3>
+  <p>Les notes indiquées en haut de page sont les moyennes publiées par Uber Eats et Google sur leurs propres plateformes. Le restaurant ne collecte, ne modère et ne vérifie pas ces avis.</p>
+  <h3>Propriété intellectuelle</h3>
+  <p>Les textes, illustrations et le logo du site appartiennent à Le Koup'Faim. Toute reproduction sans autorisation est interdite.</p>`,
+ cgv:()=>`<h2>Conditions générales de vente</h2>
+  <h3>1. Objet</h3><p>Les présentes conditions s'appliquent aux commandes passées sur ce site auprès de la société GOURAYA (SAS), exploitant le restaurant Le Koup'Faim, 16 rue du Général de Gaulle, 59400 Cambrai (SIRET 802 633 644 00017).</p>
+  <h3>2. Produits et prix</h3><p>Les plats sont décrits sur la carte en ligne. Les prix sont indiqués en euros TTC. Chaque commande passée sur le site comprend des frais de service de ${eur(SERVICE_FEE)}. Une réduction de ${eur(PAY_DISCOUNT)} est accordée sur les commandes payées au retrait ou à la livraison (espèces ou carte bancaire sur le terminal du restaurant). Les frais de service, de livraison et la réduction éventuelle sont affichés avant la validation de la commande. Le restaurant peut modifier ses prix à tout moment ; le prix appliqué est celui affiché au moment de la commande.</p>
+  <h3>3. Commande</h3><p>La commande est ferme dès que vous cliquez sur le bouton de validation. Vous recevez par e-mail la confirmation de votre commande (détail, prix, frais, mode de retrait ou de livraison) et pouvez suivre son avancement en ligne. En cas de produit indisponible, le restaurant vous contacte par téléphone.</p>
+  <h3>4. Paiement</h3><p>Par carte bancaire en ligne (paiement sécurisé, vos données bancaires ne transitent pas par le restaurant) ou au retrait / à la livraison : espèces ou carte bancaire sur le terminal du restaurant (réduction de ${eur(PAY_DISCOUNT)}).</p>
+  <h3>5. Retrait et livraison</h3><p>Retrait au 16 rue du Général de Gaulle à Cambrai. Livraison dans un rayon de ${MAX_KM} km, à partir de ${eur(MIN_DELIVERY)} de commande, avec des frais selon la distance. Les délais affichés (en moyenne ${delayText("collect")} à emporter, ${delayText("delivery")} en livraison) sont indicatifs et peuvent être allongés aux heures d'affluence.</p>
+  <h3>6. Droit de rétractation</h3><p>Conformément à l'article L221-28, 4° du Code de la consommation, le droit de rétractation ne s'applique pas aux plats préparés, qui sont des biens susceptibles de se détériorer rapidement. Pour annuler une commande avant sa préparation, appelez le 03 27 74 12 88.</p>
+  <h3>7. Réclamations</h3><p>Pour toute réclamation (erreur, produit manquant), contactez le restaurant au 03 27 74 12 88 ou à fahimnait@gmail.com.</p>
+  <h3>8. Médiation de la consommation</h3><p>En cas de litige non résolu, vous pouvez recourir gratuitement au médiateur de la consommation CM2C (Centre de la Médiation de la Consommation de Conciliateurs de Justice), ${T("[adresse postale]")}, www.cm2c.net, après une réclamation écrite adressée au restaurant.</p>
+  <h3>9. Allergènes</h3><p>La liste des allergènes de chaque plat est disponible sur la page « Allergènes et origine des viandes » et au comptoir.</p>
+  <h3>10. Droit applicable</h3><p>Les présentes conditions sont soumises au droit français.</p>`,
+ confid:()=>`<h2>Politique de confidentialité</h2>
+  <h3>Responsable du traitement</h3><p>GOURAYA (SAS), Le Koup'Faim, 16 rue du Général de Gaulle, 59400 Cambrai, représentée par M. Fahim Nait Slimane.</p>
+  <h3>Données collectées</h3><p>Prénom, téléphone, e-mail et, pour la livraison, adresse. Elles servent uniquement à préparer, livrer et suivre votre commande, et à vous joindre en cas de besoin. Elles ne sont jamais vendues ni utilisées pour de la publicité sans votre accord.</p>
+  <h3>Durée de conservation</h3><p>${T("[ex. 3 ans après la dernière commande]")}, puis suppression.</p>
+  <h3>Paiement</h3><p>Le paiement en ligne est traité par notre prestataire de paiement. Le restaurant n'a jamais accès à vos numéros de carte.</p>
+  <h3>Stockage sur votre appareil</h3><p>Le site garde votre panier et votre dernière commande dans votre navigateur pour pouvoir la recommander. Aucun cookie publicitaire ni de mesure d'audience n'est utilisé.</p>
+  <h3>Vos droits</h3><p>Vous pouvez demander l'accès, la rectification ou la suppression de vos données à fahimnait@gmail.com. Vous pouvez aussi adresser une réclamation à la CNIL (cnil.fr).</p>`,
+ allergenes:()=>`<h2>Allergènes et origine des viandes</h2>
+  <h3>Allergènes</h3>
+  <p>Nos plats peuvent contenir les allergènes suivants. Le détail plat par plat est ${T("[à compléter avec le restaurant]")} et disponible au comptoir. En cas d'allergie, précisez-le dans la note de commande ou appelez-nous.</p>
+  <ul>${ALLERG.map(a=>`<li>${a}</li>`).join("")}</ul>
+  <h3>Origine des viandes</h3>
+  <table><tr><th>Viande</th><th>Pays d'origine</th></tr>
+  ${[["Viande kebab","Pologne"],["Bœuf : steaks hachés","Pologne"],["Bœuf : brochettes","Belgique"],["Agneau (côtelettes, brochettes)","Belgique"],["Poulet","Royaume-Uni (Angleterre)"],["Merguez","France"],["Fricandelle","Allemagne"],["Kefta, adana, mexicanos, entrecôte","[à compléter]"],["Tenders, nuggets, cordon bleu","[à compléter]"]].map(([v,o])=>`<tr><td>${v}</td><td>${o.startsWith("[")?T(o):o}</td></tr>`).join("")}</table>
+  <p style="margin-top:8px">Viande halal.</p>`
+};
+document.addEventListener("click",e=>{
+  const a=e.target.closest("[data-legal]"); if(!a) return;
+  e.preventDefault(); closeAll();
+  $("#legalBody").innerHTML=LEGAL[a.dataset.legal](); openLayer($("#legal")); $("#legal").scrollTop=0;
+});
+$("#legalX").onclick=closeAll;
+
 /* ---------- Navigation site / cuisine ---------- */
 function route(){
   const k=location.hash==="#cuisine";
@@ -1363,7 +1561,7 @@ function route(){
   else renderCart();
 }
 addEventListener("hashchange",route);
-addEventListener("storage",e=>{ if(e.key==="kf-orders"||e.key==="kf-active") tick(); });
+addEventListener("storage",e=>{ if(e.key==="kf-orders"||e.key==="kf-active") tick(); if(e.key==="kf-delays") renderCart(); });
 function tick(){
   if(document.body.classList.contains("kitchen")) renderKitchen();
   else { updateTrackBtn(); if(step==="done"&&$("#drawer").classList.contains("on")) renderTrack(); }
