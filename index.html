@@ -530,6 +530,12 @@ img.ph{width:100%;height:100%;object-fit:cover;display:block}
 .ue-row.on .ctl{border-color:var(--ink);background:var(--ink)}
 .ue-row.on .ctl.radio::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
 .ue-row.on .ctl.check::after{content:"✓";color:#fff;font-size:13px;font-weight:700}
+.stp-row{display:flex;align-items:center;gap:12px;width:100%;border-bottom:1px solid var(--line);padding:9px 0;font-size:15px}
+.stp-row .lab{flex:1}.stp-row .xp{color:var(--muted);font-size:13px}
+.stp{display:flex;align-items:center;gap:8px}.stp b{min-width:18px;text-align:center;font-size:14px}
+.stpb{width:30px;height:30px;border-radius:50%;background:var(--cream);color:var(--ink);font-size:17px;font-weight:700;display:grid;place-items:center}
+.stpb:disabled{opacity:.35}.stp-row.on .stpb[data-d="1"]{background:var(--ink);color:#fff}
+.ue-sub .stp-row{border-bottom-color:rgba(38,38,40,.08)}.ue-sub .stpb{background:#fff}
 .ue-sub{background:var(--cream);border-radius:12px;padding:2px 14px;margin:2px 0 10px}
 .ue-sub .chip.ue-row{border-bottom-color:rgba(38,38,40,.08)}
 .m-foot{border-top:1px solid var(--line)}
@@ -597,7 +603,7 @@ footer .logo .lw{color:#fff}
 <div class="wrap menu-layout">
   <div>
     <div id="menu"></div>
-    <p class="menu-note">Frites fraîches incluses avec les sandwichs, libanais, paninis, burgers, pains pizza et assiettes. Toutes les assiettes sont garnies de salade et de frites. 1 sauce incluse (pour les assiettes : 1 sauce pour les frites) · sauce en plus 0,70 € · supplément fromage (maroilles, chèvre ou cheddar) 1,50 € · supplément viande de 0,75 € à 4,50 €. Photos non contractuelles.</p>
+    <p class="menu-note">Frites incluses avec les sandwichs, libanais, paninis, burgers, pains pizza et assiettes. 1 sauce incluse · supplément sauce 0,70 € · supplément fromage (maroilles, chèvre ou cheddar) 2,00 € · supplément viande de 0,75 € à 4,50 €. Photos non contractuelles.</p>
   </div>
   <aside class="side-cart" id="sideCart"></aside>
 </div>
@@ -685,7 +691,7 @@ footer .logo .lw{color:#fff}
 const K="#262628", BR="#f6c98a", BRD="#e09a45", MT="#a4552a", MTD="#7a3b18", LT="#6fae4f", TO="#e8431b", CH="#FFB23F", WH="#ffffff", OR="#FF7A00";
 const S=`stroke="${K}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"`;
 /* Photos des plats (photos du restaurant, reprises de sa page Uber Eats) */
-const PHOTO = {"sw-kebab": "sandwich-kebab", "sw-mex": "sandwich-mexicanos", "sw-poulet": "sandwich-poulet", "sw-steak": "sandwich-steak", "sw-merguez": "sandwich-merguez", "sw-agneau": "sandwich-agneau", "sw-boeuf": "sandwich-steak", "sw-kefta": "sandwich-steak", "sw-adana": "sandwich-agneau", "sw-fric": "sandwich-merguez", "lb-kebab": "galette-kebab", "lb-kefta": "galette", "lb-steak": "galette", "lb-poulet": "galette", "lb-mex": "galette", "lb-tenders": "galette", "pa-fromage": "panini", "pa-kefta": "panini", "pa-kebab": "panini", "pa-steak": "panini", "pa-poulet": "panini-poulet", "pa-mex": "panini", "pa-agneau": "panini", "pa-adana": "panini", "bu-hamb": "burger-simple", "bu-chicken": "burger-simple", "bu-double": "burger-double", "bu-triple": "burger-double", "as-kebab": "assiette-kebab", "as-kofte": "assiette-kefta", "as-steak": "assiette-steak", "as-merguez": "assiette-merguez", "as-bboeuf": "assiette-brochette-boeuf", "as-bagneau": "assiette-agneau", "as-cotelettes": "assiette-agneau", "as-tenders": "assiette-tenders", "as-mixte": "assiette-kebab", "pp-viande": "pain-pizza", "pp-fromage": "pain-pizza", "me-enfant": "menu-enfant", "de-daim": "tarte-daim", "bo-canette": "coca", "bo-eau": "eau", "bo-coca-maxi": "coca-maxi"};
+const PHOTO = {"sw-kebab": "sandwich-kebab", "sw-mex": "sandwich-mexicanos", "sw-poulet": "sandwich-poulet", "sw-steak": "sandwich-steak", "sw-merguez": "sandwich-merguez", "sw-agneau": "sandwich-agneau", "sw-boeuf": "sandwich-steak", "sw-kefta": "sandwich-steak", "sw-fric": "sandwich-merguez", "lb-kebab": "galette-kebab", "lb-kefta": "galette", "lb-steak": "galette", "lb-poulet": "galette", "lb-mex": "galette", "lb-tenders": "galette", "pa-fromage": "panini", "pa-kefta": "panini", "pa-kebab": "panini", "pa-steak": "panini", "pa-poulet": "panini-poulet", "pa-mex": "panini", "pa-bboeuf": "panini", "pa-tenders": "panini", "pa-agneau": "panini", "bu-hamb": "burger-simple", "bu-chicken": "burger-simple", "bu-double": "burger-double", "bu-triple": "burger-double", "as-kebab": "assiette-kebab", "as-kofte": "assiette-kefta", "as-steak": "assiette-steak", "as-merguez": "assiette-merguez", "as-bboeuf": "assiette-brochette-boeuf", "as-bagneau": "assiette-agneau", "as-cotelettes": "assiette-agneau", "as-tenders": "assiette-tenders", "as-mixte": "assiette-kebab", "pp-viande": "pain-pizza", "pp-fromage": "pain-pizza", "me-enfant": "menu-enfant", "de-daim": "tarte-daim", "bo-canette": "coca", "bo-eau": "eau", "bo-coca-maxi": "coca-maxi"};
 const pic = (id,e) => PHOTO[id] ? `<img class="ph" src="img/${PHOTO[id]}.webp" alt="" loading="lazy">` : art(e);
 const ART = {
  pita:`<path d="M7 29h50c0 16-11 27-25 27S7 45 7 29z" fill="${BR}" ${S}/><path d="M13 36c8 6 30 6 38 0" fill="none" stroke="${BRD}" stroke-width="2.5" stroke-linecap="round"/><path d="M8 29c3-7 8-9 12-4 3-6 9-7 12-2 4-6 10-5 12 1 4-4 10-2 12 5z" fill="${LT}" ${S}/><path d="M12 29c2-6 8-6 10-1 3-5 9-5 11 0 3-5 9-5 11 0 3-4 8-3 9 1z" fill="${MT}" ${S}/><circle cx="21" cy="22" r="4" fill="${TO}" ${S}/><circle cx="44" cy="21" r="3.5" fill="${TO}" ${S}/>`,
@@ -722,17 +728,19 @@ const SAUCES = ["Ketchup","Mayonnaise","Andalouse","Algérienne","Américaine","
 const SANS = ["Sans salade","Sans tomate","Sans oignon"];
 const CHEESES = ["Maroilles","Chèvre","Cheddar"];
 /* Supplément viande : prix de la caisse du restaurant (null = prix à confirmer) */
-const MEAT_SUP = {"Kebab":null,"Poulet":null,"Steak haché":null,"Adana":null,"Kefta":1.50,"Tenders":1.50,"Nuggets":0.75,"Merguez":2.00,"Fricandelle":2.00,"Mexicanos":2.50,"Cordon bleu":3.50,"Brochette de bœuf":4.50,"Brochette d'agneau":4.50};
+const MEAT_SUP = {"Kebab":null,"Poulet":null,"Nuggets":0.75,"Kefta":1.50,"Steak haché":2.00,"Merguez":2.00,"Tenders":2.00,"Mexicanos":3.00,"Fricandelle":3.00,"Chicken pané":3.00,"Cordon bleu":3.50,"Brochette de bœuf":4.50,"Brochette d'agneau":4.50};
+const MAX_SAUCES = 10, MAX_XMEAT = 20;
 const ALL_MEATS = Object.keys(MEAT_SUP);
 const DRINKS = ["Coca-Cola","Coca-Cola cherry","Fanta orange","Fanta citron","Oasis tropical","Oasis pomme cassis","Ice Tea pêche","7 Up mojito","7 Up cherry"];   /* canettes 33 cl */
 const PIZZA_MEATS = ["Kebab","Steak","Merguez","Fricandelle","Mexicanos","Poulet"];
-const KID_CHOICES = ["Viande kebab","Hamburger","Steak","Fricandelle","Nuggets","Tenders"];
+const KID_CHOICES = ["Viande kebab","Hamburger","Steak","Fricandelle","Nuggets (4)","Tenders (3)"];
 
 /* Suppléments (prix de la caisse du restaurant) */
-const SUP = {sauce:0.70, fromage:1.50, canette:2.00, eau:1.50};
-/* Tacos : tailles et prix à confirmer avec le restaurant (null = prix à confirmer) */
-const TACOS_SIZES = [{k:"M",n:"Tacos M",v:1,p:null},{k:"L",n:"Tacos L",v:2,p:null},{k:"XL",n:"Tacos XL",v:3,p:null}];
-const TACOS_MEATS = ["Kebab","Poulet","Steak haché","Merguez","Kefta","Mexicanos","Fricandelle","Tenders"];
+const SUP = {sauce:0.70, fromage:2.00, canette:2.00, eau:1.50};
+/* Tacos : tailles et prix */
+const TACOS_SIZES = [{k:"M",n:"Tacos M",v:1,p:7.00},{k:"L",n:"Tacos L",v:2,p:9.00},{k:"XL",n:"Tacos XL",v:3,p:12.00}];
+const FRIES_SIDE = [{k:"Moyenne",n:"Frites moyenne",p:3.50},{k:"Grande",n:"Grande frites",p:4.50}];
+const TACOS_MEATS = ["Kebab","Poulet","Steak haché","Merguez","Kefta","Mexicanos","Fricandelle","Tenders","Cordon bleu"];
 
 /* Livraison : rayon max 15 km, frais par palier (montants à définir avec le restaurant) */
 const MAX_KM = 15;
@@ -761,7 +769,7 @@ const delayText = mode => mode==="delivery" ? `${delayOf("delivery")-5}–${dela
 const SW = (id,n,p,v,o={}) => ({id,n,p,e:"pita",d:`Pain, ${v}, crudités, 1 sauce au choix + frites`,s:1,fr:true,x:true,sup:true,...o});
 const LB = (id,n,v,o={}) => ({id,n,p:7.00,e:"wrap",d:`Pain libanais roulé, ${v}, crudités, sauce + frites`,s:1,fr:true,x:true,sup:true,...o});
 const PN = (id,n,p,v,o={}) => ({id,n,p,e:"panini",d:`Panini grillé, ${v} + frites`,s:1,fr:true,x:true,sup:true,...o});
-const AS = (id,n,p,e,v,o={}) => ({id,n,p,e,d:`${v}, salade, frites + 1 sauce au choix pour les frites`,s:1,fr:true,x:true,plate:true,...o});
+const AS = (id,n,p,e,v,o={}) => ({id,n,p,e,d:`${v}, salade, frites + 1 sauce au choix`,s:1,fr:true,x:true,plate:true,...o});
 const MENU = [
  {cat:"Sandwichs", items:[
   SW("sw-kebab","Kebab + frites",6.50,"viande kebab",{pop:true}),
@@ -773,7 +781,7 @@ const MENU = [
   SW("sw-fric","Fricandelle + frites",6.50,"fricandelle"),
   SW("sw-boeuf","Bœuf + frites",7.50,"bœuf"),
   SW("sw-agneau","Agneau + frites",7.50,"agneau"),
-  SW("sw-adana","Adana + frites",7.50,"adana"),
+  SW("sw-tenders","Tenders + frites",null,"tenders"),
  ]},
  {cat:"Libanais", items:[
   LB("lb-kebab","Libanais kebab + frites","viande kebab",{pop:true}),
@@ -784,7 +792,7 @@ const MENU = [
   LB("lb-tenders","Libanais tenders + frites","tenders"),
  ]},
  {cat:"Tacos", items:[
-  {id:"ta-compose",n:"Tacos à composer",p:null,e:"tacos",d:"Taille, viandes et sauce au choix. Frites et sauce fromagère à l'intérieur.",tacos:true,s:1,x:true,sup:true},
+  {id:"ta-compose",n:"Tacos à composer",p:7.00,e:"tacos",d:"Taille, viandes et sauce au choix. Frites et sauce fromagère à l'intérieur.",tacos:true,s:1,x:true,sup:true},
  ]},
  {cat:"Paninis", items:[
   PN("pa-fromage","Panini fromage + frites",6.00,"fromage"),
@@ -794,28 +802,29 @@ const MENU = [
   PN("pa-poulet","Panini poulet + frites",7.00,"poulet"),
   PN("pa-mex","Panini mexicanos + frites",7.00,"mexicanos"),
   PN("pa-agneau","Panini agneau + frites",8.00,"agneau"),
-  PN("pa-adana","Panini adana + frites",8.00,"adana"),
+  PN("pa-bboeuf","Panini brochette de bœuf + frites",null,"brochette de bœuf"),
+  PN("pa-tenders","Panini tenders + frites",7.00,"tenders"),
  ]},
  {cat:"Burgers", items:[
   {id:"bu-hamb",n:"Hamburger steak + frites",p:6.00,e:"burger",d:"Steak haché, crudités, sauce + frites",s:1,fr:true,x:true,sup:true},
   {id:"bu-chicken",n:"Chicken burger + frites",p:7.50,e:"burger",d:"Poulet pané, crudités, sauce + frites",s:1,fr:true,x:true,sup:true},
   {id:"bu-double",n:"Double steak + frites",p:7.50,e:"burger",d:"Deux steaks hachés, crudités, sauce + frites",s:1,fr:true,x:true,sup:true,pop:true},
-  {id:"bu-triple",n:"Triple steak + frites",p:8.50,e:"burger",d:"Trois steaks hachés, crudités, sauce + frites",s:1,fr:true,x:true,sup:true},
+  {id:"bu-triple",n:"Triple steak + frites",p:9.00,e:"burger",d:"Trois steaks hachés, crudités, sauce + frites",s:1,fr:true,x:true,sup:true},
  ]},
  {cat:"Assiettes", items:[
   AS("as-kebab","Assiette kebab",9.00,"plate","Viande kebab",{pop:true}),
-  AS("as-fric","Assiette fricandelle",9.00,"merguez","Fricandelles"),
+  AS("as-fric","Assiette fricandelle (2)",9.00,"merguez","2 fricandelles"),
   AS("as-kofte","Assiette köfte",9.00,"kefta","Köfte"),
   AS("as-merguez","Assiette merguez (3)",9.00,"merguez","3 merguez"),
   AS("as-steak","Assiette steak haché",9.00,"steak","Steak haché"),
   AS("as-mex","Assiette mexicanos",9.00,"chili","Mexicanos"),
   AS("as-bpoulet","Assiette poulet",9.50,"skewer","Poulet"),
-  AS("as-bboeuf","Assiette brochette bœuf",12.00,"skewer","Brochette de bœuf"),
-  AS("as-mixte","Assiette mixte",13.50,"plate","Steak, kebab, poulet, merguez"),
+  AS("as-bboeuf","Assiette brochettes de bœuf (2)",13.00,"skewer","2 brochettes de bœuf"),
+  AS("as-mixte","Assiette mixte",13.50,"plate","Kebab, poulet, merguez, kefta"),
   AS("as-cotelettes","Assiette côtelettes d'agneau",13.50,"steak","Côtelettes d'agneau"),
   AS("as-bagneau","Assiette brochette d'agneau",13.50,"skewer","Brochette d'agneau"),
   AS("as-entrecote","Assiette entrecôte",14.50,"steak","Entrecôte"),
-  AS("as-tenders","Assiette tenders",null,"tenders","5 tenders"),
+  AS("as-tenders","Assiette tenders (3)",12.00,"tenders","3 tenders"),
  ]},
  {cat:"Pains pizza", items:[
   {id:"pp-viande",n:"Pain pizza viande + frites",p:7.00,e:"pizzabread",d:"Pain, sauce provençale, viande au choix, mozzarella + frites",ch:{t:"Viande",o:PIZZA_MEATS},fr:true,x:true,sup:true,pop:true},
@@ -823,7 +832,10 @@ const MENU = [
  ]},
  {cat:"Viandes seules", items:[
   {id:"vs-kebab",n:"Barquette kebab",p:5.50,e:"box",d:"Viande kebab seule, en barquette",s:1,x:true},
-  {id:"vs-poulet",n:"Barquette poulet",p:6.50,e:"box",d:"Poulet seul, en barquette",s:1,x:true},
+  {id:"vs-poulet",n:"Barquette poulet",p:6.00,e:"box",d:"Poulet seul, en barquette",s:1,x:true},
+  {id:"vs-kefta",n:"Barquette kefta",p:null,e:"box",d:"Kefta seule, en barquette",s:1,x:true},
+  {id:"vs-bagneau",n:"Barquette brochette d'agneau",p:null,e:"skewer",d:"Brochette d'agneau seule, en barquette",s:1,x:true},
+  {id:"vs-bboeuf",n:"Barquette brochette de bœuf",p:null,e:"skewer",d:"Brochette de bœuf seule, en barquette",s:1,x:true},
   {id:"vs-tenders",n:"Barquette tenders (6)",p:7.50,e:"tenders",d:"6 tenders, en barquette",s:1,x:true},
  ]},
  {cat:"Tex Mex", items:[
@@ -838,7 +850,7 @@ const MENU = [
   {id:"fr-grande",n:"Grande frites",p:4.50,e:"fries",d:"Frites fraîches",x:true},
  ]},
  {cat:"Menu enfant", items:[
-  {id:"me-enfant",n:"Menu enfant",p:7.00,e:"kid",d:"Viande kebab, hamburger, steak, fricandelle, nuggets ou tenders + frites + Capri-Sun, avec surprise",ch:{t:"Au choix",o:KID_CHOICES},fr:true},
+  {id:"me-enfant",n:"Menu enfant",p:6.50,e:"kid",d:"Au choix : viande kebab, hamburger, steak, fricandelle, 4 nuggets ou 3 tenders + frites + 1 sauce au choix + Capri-Sun, avec surprise",ch:{t:"Au choix",o:KID_CHOICES},s:1,fr:true,kidMenu:true},
  ]},
  {cat:"Desserts", items:[
   {id:"de-tiramisu",n:"Tiramisu",p:3.50,e:"cake",d:"Tiramisu individuel"},
@@ -944,7 +956,7 @@ $("#zSelect").onchange=e=>{const r=zoneText(e.target.value),el=$("#zRes");if(!r)
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g,"-");
 $("#cats").innerHTML = `<button class="cat active" data-cat="populaires">⭐ Populaires</button>`+MENU.map(c=>`<button class="cat" data-cat="${slug(c.cat)}">${c.cat}</button>`).join("");
 const card = i => `<button class="item ue-item" data-id="${i.id}">
-  <div class="ue-txt"><span class="name">${i.n}</span><span class="price">${eur(i.p)}</span><span class="desc">${i.d}</span>${i.fr?'<span class="pop">Frites fraîches incluses</span>':""}</div>
+  <div class="ue-txt"><span class="name">${i.n}</span><span class="price">${eur(i.p)}</span><span class="desc">${i.d}</span></div>
   <div class="ue-img">${pic(i.id,i.e)}<span class="ue-plus">+</span></div></button>`;
 const popCard = i => `<button class="item ue-pop" data-id="${i.id}"><div class="ue-img">${pic(i.id,i.e)}<span class="ue-plus">+</span></div><span class="name">${i.n}</span><span class="price">${eur(i.p)}</span></button>`;
 $("#menu").innerHTML =
@@ -983,7 +995,7 @@ let cur=null, sel, q=1;
 document.querySelectorAll(".item").forEach(b=>b.onclick=()=>openItem(byId(b.dataset.id)));
 function openItem(it){
   cur=it; q=1;
-  sel={choice:"",kidDrink:"",sauce:"",fSauces:[],size:"M",meats:[],sans:[],supOpen:{fromage:false,viande:false},cheeses:[],xmeats:[],xDrink:""};
+  sel={choice:"",kidDrink:"",sauce:"",xs:{},size:"M",meats:[],sans:[],supOpen:{fromage:false,viande:false},cheeses:[],xm:{},xDrink:"",tFries:""};
   $("#mEmo").innerHTML=pic(it.id,it.e); $("#mEmo").classList.toggle("has-ph",!!PHOTO[it.id]); $("#mPrice").textContent=eur(it.p);
   $("#mName").textContent=it.n; $("#mDesc").textContent=it.d;
   renderModal(); openLayer($("#modal")); $("#modal").scrollTop=0;
@@ -993,6 +1005,8 @@ function renderModal(){
   const it=cur;
   const row=(type,label,on,k,v,xp="",sub="")=>`<button class="chip ue-row${on?" on":""}" data-k="${k}" data-v="${esc(v)}"><span class="lab">${label}${sub?`<small>${sub}</small>`:""}</span>${xp?`<span class="xp">${xp}</span>`:""}<span class="ctl ${type}"></span></button>`;
   const grp=(title,hint,req,done,rows)=>`<div class="og"><div class="og-h"><div><b>${title}</b><small>${hint}</small></div><span class="og-req ${req?(done?"ok":"need"):""}">${req?(done?"✓ Choisi":"Obligatoire"):"Facultatif"}</span></div>${rows}</div>`;
+  const sum=o=>Object.values(o).reduce((a,b)=>a+b,0);
+  const step=(label,n,k,v,xp)=>`<div class="ue-row stp-row${n?" on":""}"><span class="lab">${label}</span>${xp?`<span class="xp">${xp}</span>`:""}<span class="stp"><button class="stpb" data-k="${k}" data-v="${esc(v)}" data-d="-1" ${n?"":"disabled"} aria-label="Retirer">−</button><b>${n}</b><button class="stpb" data-k="${k}" data-v="${esc(v)}" data-d="1" aria-label="Ajouter">+</button></span></div>`;
   let h="";
   if(it.ch) h+=grp(it.ch.t,"Choisissez-en 1",true,!!sel.choice,it.ch.o.map(o=>row("radio",o,sel.choice===o,"choice",o)).join(""));
   if(it.kid) h+=grp("Boisson du menu","Choisissez-en 1",true,!!sel.kidDrink,DRINKS.map(d=>row("radio",d,sel.kidDrink===d,"kiddrink",d)).join(""));
@@ -1000,17 +1014,18 @@ function renderModal(){
     const sz=TACOS_SIZES.find(x=>x.k===sel.size);
     h+=grp("Taille","Choisissez-en 1",true,true,TACOS_SIZES.map(x=>row("radio",x.n,sel.size===x.k,"size",x.k,eur(x.p),`${x.v} viande${x.v>1?"s":""}`)).join(""));
     h+=grp("Viandes",`Choisissez-en ${sz.v} (${sel.meats.length}/${sz.v})`,true,sel.meats.length===sz.v,TACOS_MEATS.map(m=>row("check",m,sel.meats.includes(m),"meat",m)).join(""));
+    h+=grp("Frites à côté","Choisissez-en 1",false,false,FRIES_SIDE.map(f=>row("radio",f.n,sel.tFries===f.k,"tfries",f.k,"+"+eur(f.p))).join(""));
   }
   if(it.s){
     h+=grp(it.plate?"Sauce pour les frites":"Sauce","1 sauce incluse",true,!!sel.sauce,["Sans sauce",...SAUCES].map(x=>row("radio",x,sel.sauce===x,"sauce",x)).join(""));
-    if(!it.tacos && !it.id.startsWith("vs-")) h+=grp("Retirer un ingrédient","",false,false,SANS.map(x=>row("check",x,sel.sans.includes(x),"sans",x)).join(""));
+    if(!it.tacos && !it.kidMenu && !it.id.startsWith("vs-")) h+=grp("Retirer un ingrédient","",false,false,SANS.map(x=>row("check",x,sel.sans.includes(x),"sans",x)).join(""));
   }
-  if(it.fr) h+=grp(it.plate?"Sauce en plus":"Sauce pour les frites",`${supLabel(SUP.sauce)} par sauce`,false,false,SAUCES.map(x=>row("check",x,sel.fSauces.includes(x),"fsauce",x,supLabel(SUP.sauce))).join(""));
+  if(it.s||it.fr||/^(fr|tm)-/.test(it.id)) h+=grp("Supplément sauce",`${supLabel(SUP.sauce)} par sauce · ${MAX_SAUCES} maximum (${sum(sel.xs)}/${MAX_SAUCES})`,false,false,SAUCES.map(x=>step(x,sel.xs[x]||0,"xs",x,supLabel(SUP.sauce))).join(""));
   if(it.sup){
     let rows=row("check","🧀 Supplément fromage",sel.supOpen.fromage,"supopen","fromage",supLabel(SUP.fromage));
     if(sel.supOpen.fromage) rows+=`<div class="ue-sub">${CHEESES.map(c=>row("check",c,sel.cheeses.includes(c),"cheese",c,supLabel(SUP.fromage))).join("")}</div>`;
     rows+=row("check","🥩 Supplément viande",sel.supOpen.viande,"supopen","viande","au choix");
-    if(sel.supOpen.viande) rows+=`<div class="ue-sub">${ALL_MEATS.map(m=>row("check",m,sel.xmeats.includes(m),"xmeat",m,supLabel(MEAT_SUP[m]))).join("")}</div>`;
+    if(sel.supOpen.viande) rows+=`<div class="ue-sub">${ALL_MEATS.map(m=>step(m,sel.xm[m]||0,"xm",m,supLabel(MEAT_SUP[m]))).join("")}</div>`;
     h+=grp("Suppléments","Fromage ou viande en plus",false,false,rows);
   }
   if(it.x) h+=grp("Ajouter une boisson","Choisissez-en 1",false,false,DRINKS.map(d=>row("radio",d,sel.xDrink===d,"xdrink",d,supLabel(SUP.canette),"Canette 33 cl")).join("")+row("radio","Eau",sel.xDrink==="Eau","xdrink","Eau",supLabel(SUP.eau),"Bouteille"));
@@ -1022,19 +1037,27 @@ function renderModal(){
 }
 const toggle=(arr,v)=>{const i=arr.indexOf(v);i>-1?arr.splice(i,1):arr.push(v);};
 $("#mBody").addEventListener("click",e=>{
+  const b=e.target.closest(".stpb");
+  if(b){
+    const o=b.dataset.k==="xs"?sel.xs:sel.xm, v=b.dataset.v, d=+b.dataset.d, n=(o[v]||0)+d;
+    const tot=Object.values(o).reduce((a,x)=>a+x,0);
+    if(d>0 && b.dataset.k==="xs" && tot>=MAX_SAUCES) return toast(`${MAX_SAUCES} sauces maximum`);
+    if(d>0 && b.dataset.k==="xm" && tot>=MAX_XMEAT) return toast(`${MAX_XMEAT} suppléments viande maximum`);
+    if(n<=0) delete o[v]; else o[v]=n;
+    return renderModal();
+  }
   const c=e.target.closest(".chip"); if(!c) return;
   const k=c.dataset.k, v=c.dataset.v, it=cur;
   switch(k){
     case "choice": sel.choice=v; break;
     case "kiddrink": sel.kidDrink=v; break;
     case "sauce": sel.sauce=v; break;
-    case "fsauce": toggle(sel.fSauces,v); break;
+    case "tfries": sel.tFries=sel.tFries===v?"":v; break;
     case "size": sel.size=v; sel.meats=sel.meats.slice(0,TACOS_SIZES.find(x=>x.k===v).v); break;
     case "meat": {const a=sel.meats, max=TACOS_SIZES.find(x=>x.k===sel.size).v; if(a.includes(v)) toggle(a,v); else if(a.length>=max){ if(max===1){a.length=0;a.push(v);} else return toast(`${max} viandes maximum pour cette taille`);} else a.push(v); break;}
     case "sans": toggle(sel.sans,v); break;
-    case "supopen": sel.supOpen[v]=!sel.supOpen[v]; if(!sel.supOpen[v]){ if(v==="fromage") sel.cheeses=[]; else sel.xmeats=[]; } break;
+    case "supopen": sel.supOpen[v]=!sel.supOpen[v]; if(!sel.supOpen[v]){ if(v==="fromage") sel.cheeses=[]; else sel.xm={}; } break;
     case "cheese": toggle(sel.cheeses,v); break;
-    case "xmeat": toggle(sel.xmeats,v); break;
     case "xdrink": sel.xDrink=sel.xDrink===v?"":v; break;
   }
   renderModal();
@@ -1042,8 +1065,9 @@ $("#mBody").addEventListener("click",e=>{
 function unitPrice(){
   let p = cur.tacos ? TACOS_SIZES.find(x=>x.k===sel.size).p : cur.p;
   if(p==null) return null;
-  p += sel.fSauces.length*(SUP.sauce||0);
-  p += sel.cheeses.length*SUP.fromage + sel.xmeats.reduce((a,m)=>a+(MEAT_SUP[m]||0),0);
+  p += Object.values(sel.xs).reduce((a,n)=>a+n,0)*SUP.sauce;
+  p += sel.cheeses.length*SUP.fromage + Object.entries(sel.xm).reduce((a,[m,n])=>a+(MEAT_SUP[m]||0)*n,0);
+  if(sel.tFries) p += FRIES_SIDE.find(f=>f.k===sel.tFries).p;
   if(sel.xDrink) p+= sel.xDrink==="Eau" ? SUP.eau : SUP.canette;
   return p;
 }
@@ -1057,14 +1081,16 @@ $("#mAdd").onclick=()=>{
   if(it.ch && !sel.choice) return toast(`Choisissez : ${it.ch.t.toLowerCase()}`);
   if(it.kid && !sel.kidDrink) return toast("Choisissez la boisson du menu");
   if(sel.supOpen.fromage&&!sel.cheeses.length) return toast("Choisissez votre fromage");
-  if(sel.supOpen.viande&&!sel.xmeats.length) return toast("Choisissez la viande en plus");
+  if(sel.supOpen.viande&&!Object.keys(sel.xm).length) return toast("Choisissez la viande en plus");
   if(sel.choice) opts.push(`${it.ch.t} : ${sel.choice}`);
   if(sel.kidDrink) opts.push("Boisson : "+sel.kidDrink);
   if(sel.sauce) opts.push("Sauce : "+sel.sauce);
-  if(sel.fSauces.length) opts.push("+ Sauce frites : "+sel.fSauces.join(", "));
+  const qtxt=o=>Object.entries(o).map(([k,n])=>n>1?`${n} × ${k}`:k).join(", ");
+  if(Object.keys(sel.xs).length) opts.push("+ Sauce : "+qtxt(sel.xs));
   opts.push(...sel.sans);
   if(sel.cheeses.length) opts.push("+ Fromage : "+sel.cheeses.join(", "));
-  if(sel.xmeats.length) opts.push("+ Viande : "+sel.xmeats.join(", "));
+  if(Object.keys(sel.xm).length) opts.push("+ Viande : "+qtxt(sel.xm));
+  if(sel.tFries) opts.push("+ "+FRIES_SIDE.find(f=>f.k===sel.tFries).n);
   if(sel.xDrink) opts.push(sel.xDrink==="Eau"?"+ Bouteille d'eau":"+ Canette : "+sel.xDrink);
   flyToCart($("#mEmo"), it.e, it.id);
   addLine({id:it.id,n:name,e:it.e,opts,q,u:unitPrice()});
@@ -1544,7 +1570,7 @@ const LEGAL = {
   <ul>${ALLERG.map(a=>`<li>${a}</li>`).join("")}</ul>
   <h3>Origine des viandes</h3>
   <table><tr><th>Viande</th><th>Pays d'origine</th></tr>
-  ${[["Viande kebab","Pologne"],["Bœuf : steaks hachés","Pologne"],["Bœuf : brochettes","Belgique"],["Agneau (côtelettes, brochettes)","Belgique"],["Poulet","Royaume-Uni (Angleterre)"],["Merguez","France"],["Fricandelle","Allemagne"],["Kefta, adana, mexicanos, entrecôte","[à compléter]"],["Tenders, nuggets, cordon bleu","[à compléter]"]].map(([v,o])=>`<tr><td>${v}</td><td>${o.startsWith("[")?T(o):o}</td></tr>`).join("")}</table>
+  ${[["Viande kebab","Pologne"],["Bœuf : steaks hachés","Pologne"],["Bœuf : brochettes","Belgique"],["Agneau (côtelettes, brochettes)","Belgique"],["Poulet","Royaume-Uni (Angleterre)"],["Merguez","France"],["Fricandelle","Allemagne"],["Kefta, mexicanos, entrecôte","[à compléter]"],["Tenders, nuggets, cordon bleu","[à compléter]"]].map(([v,o])=>`<tr><td>${v}</td><td>${o.startsWith("[")?T(o):o}</td></tr>`).join("")}</table>
   <p style="margin-top:8px">Viande halal.</p>`
 };
 document.addEventListener("click",e=>{
