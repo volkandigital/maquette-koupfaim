@@ -1017,7 +1017,7 @@ function renderModal(){
     h+=grp("Frites à côté","Choisissez-en 1",false,false,FRIES_SIDE.map(f=>row("radio",f.n,sel.tFries===f.k,"tfries",f.k,"+"+eur(f.p))).join(""));
   }
   if(it.s){
-    h+=grp(it.plate?"Sauce pour les frites":"Sauce","1 sauce incluse",true,!!sel.sauce,["Sans sauce",...SAUCES].map(x=>row("radio",x,sel.sauce===x,"sauce",x)).join(""));
+    h+=grp("Sauce","1 sauce incluse",true,!!sel.sauce,["Sans sauce",...SAUCES].map(x=>row("radio",x,sel.sauce===x,"sauce",x)).join(""));
     if(!it.tacos && !it.kidMenu && !it.id.startsWith("vs-")) h+=grp("Retirer un ingrédient","",false,false,SANS.map(x=>row("check",x,sel.sans.includes(x),"sans",x)).join(""));
   }
   if(it.s||it.fr||/^(fr|tm)-/.test(it.id)) h+=grp("Supplément sauce",`${supLabel(SUP.sauce)} par sauce · ${MAX_SAUCES} maximum (${sum(sel.xs)}/${MAX_SAUCES})`,false,false,SAUCES.map(x=>step(x,sel.xs[x]||0,"xs",x,supLabel(SUP.sauce))).join(""));
