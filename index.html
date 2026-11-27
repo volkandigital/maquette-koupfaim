@@ -728,7 +728,7 @@ const SAUCES = ["Ketchup","Mayonnaise","Andalouse","Algérienne","Américaine","
 const SANS = ["Sans salade","Sans tomate","Sans oignon"];
 const CHEESES = ["Maroilles","Chèvre","Cheddar"];
 /* Supplément viande : prix de la caisse du restaurant (null = prix à confirmer) */
-const MEAT_SUP = {"Kebab":null,"Poulet":null,"Nuggets":0.75,"Kefta":1.50,"Steak haché":2.00,"Merguez":2.00,"Tenders":2.00,"Mexicanos":3.00,"Fricandelle":3.00,"Chicken pané":3.00,"Cordon bleu":3.50,"Brochette de bœuf":4.50,"Brochette d'agneau":4.50};
+const MEAT_SUP = {"Kebab":null,"Poulet":null,"Nuggets":0.75,"Kefta":2.00,"Steak haché":2.00,"Merguez":2.00,"Tenders":2.00,"Mexicanos":3.00,"Fricandelle":3.00,"Chicken pané":3.00,"Cordon bleu":3.50,"Brochette de bœuf":4.50,"Brochette d'agneau":4.50};
 const MAX_SAUCES = 10, MAX_XMEAT = 20;
 const ALL_MEATS = Object.keys(MEAT_SUP);
 const DRINKS = ["Coca-Cola","Coca-Cola cherry","Fanta orange","Fanta citron","Oasis tropical","Oasis pomme cassis","Ice Tea pêche","7 Up mojito","7 Up cherry"];   /* canettes 33 cl */
@@ -833,7 +833,7 @@ const MENU = [
  {cat:"Viandes seules", items:[
   {id:"vs-kebab",n:"Barquette kebab",p:5.50,e:"box",d:"Viande kebab seule, en barquette",s:1,x:true},
   {id:"vs-poulet",n:"Barquette poulet",p:6.00,e:"box",d:"Poulet seul, en barquette",s:1,x:true},
-  {id:"vs-kefta",n:"Barquette kefta",p:null,e:"box",d:"Kefta seule, en barquette",s:1,x:true},
+  {id:"vs-kefta",n:"Kefta",p:2.00,e:"kefta",d:"À l'unité · kefta seule",s:1,x:true,unit:true},
   {id:"vs-bagneau",n:"Brochette d'agneau",p:4.50,e:"skewer",d:"À l'unité · brochette d'agneau seule",s:1,x:true,unit:true},
   {id:"vs-bboeuf",n:"Brochette de bœuf",p:4.50,e:"skewer",d:"À l'unité · brochette de bœuf seule",s:1,x:true,unit:true},
   {id:"vs-tenders",n:"Barquette tenders (6)",p:7.50,e:"tenders",d:"6 tenders, en barquette",s:1,x:true},
