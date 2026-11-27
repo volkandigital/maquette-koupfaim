@@ -837,11 +837,11 @@ const MENU = [
   {id:"vs-bagneau",n:"Barquette brochette d'agneau",p:null,e:"skewer",d:"Brochette d'agneau seule, en barquette",s:1,x:true},
   {id:"vs-bboeuf",n:"Barquette brochette de bœuf",p:null,e:"skewer",d:"Brochette de bœuf seule, en barquette",s:1,x:true},
   {id:"vs-tenders",n:"Barquette tenders (6)",p:7.50,e:"tenders",d:"6 tenders, en barquette",s:1,x:true},
-  {id:"tm-fric",n:"Fricandelle",p:1.00,e:"merguez",d:"À l'unité · saucisse de viande hachée, spécialité du Nord",x:true},
-  {id:"tm-nuggets",n:"Nuggets (4)",p:3.00,e:"nuggets",d:"4 nuggets de poulet",x:true},
-  {id:"tm-mex",n:"Mexicanos",p:1.00,e:"chili",d:"À l'unité · saucisse de viande hachée épicée façon mexicaine",x:true},
-  {id:"tm-merguez",n:"Merguez",p:1.00,e:"merguez",d:"À l'unité · saucisse de viande hachée épicée",x:true},
-  {id:"tm-tenders",n:"Tenders (4)",p:6.00,e:"tenders",d:"4 tenders de poulet",x:true},
+  {id:"tm-fric",n:"Fricandelle",p:1.00,e:"merguez",d:"À l'unité · saucisse de viande hachée, spécialité du Nord",x:true,unit:true},
+  {id:"tm-nuggets",n:"Nuggets",p:0.75,e:"nuggets",d:"À l'unité · nugget de poulet, choisissez la quantité",x:true,unit:true},
+  {id:"tm-mex",n:"Mexicanos",p:1.00,e:"chili",d:"À l'unité · saucisse de viande hachée épicée façon mexicaine",x:true,unit:true},
+  {id:"tm-merguez",n:"Merguez",p:1.00,e:"merguez",d:"À l'unité · saucisse de viande hachée épicée",x:true,unit:true},
+  {id:"tm-tenders",n:"Tenders",p:2.00,e:"tenders",d:"À l'unité · tender de poulet, choisissez la quantité",x:true,unit:true},
  ]},
  {cat:"Frites", items:[
   {id:"fr-moyenne",n:"Frites moyenne",p:3.50,e:"fries",d:"Frites fraîches",x:true},
@@ -954,9 +954,9 @@ $("#zSelect").onchange=e=>{const r=zoneText(e.target.value),el=$("#zRes");if(!r)
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g,"-");
 $("#cats").innerHTML = `<button class="cat active" data-cat="populaires">⭐ Populaires</button>`+MENU.map(c=>`<button class="cat" data-cat="${slug(c.cat)}">${c.cat}</button>`).join("");
 const card = i => `<button class="item ue-item" data-id="${i.id}">
-  <div class="ue-txt"><span class="name">${i.n}</span><span class="price">${eur(i.p)}</span><span class="desc">${i.d}</span></div>
+  <div class="ue-txt"><span class="name">${i.n}</span><span class="price">${eur(i.p)}${i.unit?" l'unité":""}</span><span class="desc">${i.d}</span></div>
   <div class="ue-img">${pic(i.id,i.e)}<span class="ue-plus">+</span></div></button>`;
-const popCard = i => `<button class="item ue-pop" data-id="${i.id}"><div class="ue-img">${pic(i.id,i.e)}<span class="ue-plus">+</span></div><span class="name">${i.n}</span><span class="price">${eur(i.p)}</span></button>`;
+const popCard = i => `<button class="item ue-pop" data-id="${i.id}"><div class="ue-img">${pic(i.id,i.e)}<span class="ue-plus">+</span></div><span class="name">${i.n}</span><span class="price">${eur(i.p)}${i.unit?" l'unité":""}</span></button>`;
 $("#menu").innerHTML =
   `<div class="cat-block" id="cat-populaires"><h3>Les plus commandés</h3><div class="pop-row">${ALL.filter(i=>i.pop).map(popCard).join("")}</div></div>`+
   MENU.map(c=>`<div class="cat-block" id="cat-${slug(c.cat)}"><h3>${c.cat}</h3><div class="grid">${c.items.map(card).join("")}</div></div>`).join("");
@@ -1006,6 +1006,7 @@ function renderModal(){
   const sum=o=>Object.values(o).reduce((a,b)=>a+b,0);
   const step=(label,n,k,v,xp)=>`<div class="ue-row stp-row${n?" on":""}"><span class="lab">${label}</span>${xp?`<span class="xp">${xp}</span>`:""}<span class="stp"><button class="stpb" data-k="${k}" data-v="${esc(v)}" data-d="-1" ${n?"":"disabled"} aria-label="Retirer">−</button><b>${n}</b><button class="stpb" data-k="${k}" data-v="${esc(v)}" data-d="1" aria-label="Ajouter">+</button></span></div>`;
   let h="";
+  if(it.unit) h+=grp("Combien en voulez-vous ?",`${eur(it.p)} l'unité`,true,true,`<div class="ue-row stp-row on qty-big"><span class="lab">${q} × ${esc(it.n)}</span><span class="xp">${eur(it.p*q)}</span><span class="stp"><button class="stpb" data-k="qty" data-d="-1" ${q>1?"":"disabled"} aria-label="Moins">−</button><b>${q}</b><button class="stpb" data-k="qty" data-d="1" aria-label="Plus">+</button></span></div>`);
   if(it.ch) h+=grp(it.ch.t,"Choisissez-en 1",true,!!sel.choice,it.ch.o.map(o=>row("radio",o,sel.choice===o,"choice",o)).join(""));
   if(it.kid) h+=grp("Boisson du menu","Choisissez-en 1",true,!!sel.kidDrink,DRINKS.map(d=>row("radio",d,sel.kidDrink===d,"kiddrink",d)).join(""));
   if(it.tacos){
@@ -1036,6 +1037,7 @@ function renderModal(){
 const toggle=(arr,v)=>{const i=arr.indexOf(v);i>-1?arr.splice(i,1):arr.push(v);};
 $("#mBody").addEventListener("click",e=>{
   const b=e.target.closest(".stpb");
+  if(b && b.dataset.k==="qty"){ q=Math.max(1,Math.min(99,q+(+b.dataset.d))); return renderModal(); }
   if(b){
     const o=b.dataset.k==="xs"?sel.xs:sel.xm, v=b.dataset.v, d=+b.dataset.d, n=(o[v]||0)+d;
     const tot=Object.values(o).reduce((a,x)=>a+x,0);
@@ -1070,8 +1072,8 @@ function unitPrice(){
   return p;
 }
 function updModal(){const u=unitPrice();$("#mQty").textContent=q;$("#mAdd").textContent=`Ajouter ${q} au panier · ${eur(u==null?null:u*q)}`;}
-$("#mMinus").onclick=()=>{if(q>1){q--;updModal();}};
-$("#mPlus").onclick=()=>{q++;updModal();};
+$("#mMinus").onclick=()=>{if(q>1){q--; cur.unit?renderModal():updModal();}};
+$("#mPlus").onclick=()=>{q++; cur.unit?renderModal():updModal();};
 $("#mAdd").onclick=()=>{
   const it=cur, opts=[]; let name=it.n;
   if(it.tacos){ const sz=TACOS_SIZES.find(x=>x.k===sel.size); if(sel.meats.length<sz.v) return toast(`Choisissez ${sz.v} viande${sz.v>1?"s":""} (${sel.meats.length}/${sz.v})`); name=sz.n; opts.push("Viandes : "+sel.meats.join(", ")); }
